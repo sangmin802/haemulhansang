@@ -7,11 +7,12 @@ import '../css/App.css';
 
 class App extends React.Component {
   render(){
-    if(window.location.pathname === '/'){
-      this.goPage(true)
-    };
+    // if(window.location.pathname === '/'){
+    //   const { goIndex } = this.props;
+    //   goIndex();
+    // };
 
-    const { isIndex, selectedPage } = this.props;
+    const { isIndex, selectedPage, goIndex, selectedSubPage } = this.props;
     const routeList = [
       { id : 1, title : 'ABOUT US', link : '/about/about' },
       { id : 2, title : 'MENU', link : '' },
@@ -51,11 +52,11 @@ class App extends React.Component {
                 <img src="/img/index/main_logo.png" alt="해물한상" />
               </div>
               <ul className="route">
-                <li className="normal"><Link to='/about/about' onClick={this.goPage}>ABOUT US</Link></li>
-                <li className="normal"><Link to='' onClick={this.goPage}>MENU</Link></li>
-                <li className="normal"><Link to='' onClick={this.goPage}>FRANCHISE</Link></li>
-                <li className="normal"><Link to='' onClick={this.goPage}>STORE</Link></li>
-                <li className="normal"><Link to='' onClick={this.goPage}>COMMUNITY</Link></li>
+                <li className="normal"><Link to='/about/about' data-index = '1' onClick={this.goPage.bind(this)}>ABOUT US</Link></li>
+                <li className="normal"><Link to='' data-index = '2' onClick={this.goPage.bind(this)}>MENU</Link></li>
+                <li className="normal"><Link to='' data-index = '3' onClick={this.goPage.bind(this)}>FRANCHISE</Link></li>
+                <li className="normal"><Link to='' data-index = '4' onClick={this.goPage.bind(this)}>STORE</Link></li>
+                <li className="normal"><Link to='' data-index = '5' onClick={this.goPage.bind(this)}>COMMUNITY</Link></li>
                 <li className="notNormal1 notNormal"><Link to='' onClick={this.goPage}>메뉴경쟁력</Link></li>
                 <li className="notNormal2 notNormal"><Link to='' onClick={this.goPage}>매장찾기</Link></li>
               </ul>
@@ -64,21 +65,30 @@ class App extends React.Component {
             <div className="pageRoute">
               <div className="top">
                 <div className="logo">
-                  <Link to='/' onClick={this.goPage.bind(this, true)}><img src="/img/index/logo.jpg" alt="해물한상" /></Link>
+                  <Link to='/' onClick={goIndex}><img src="/img/index/logo.jpg" alt="해물한상" /></Link>
                 </div>
                 <div className="route">
                   {routeList.map(res => {
+                    let className = 'pageLink';
                     if(selectedPage === res.id){
-                      return <div className="normal" key={res.id}><Link to={res.link} className="pageLink selected" data-index={res.id} onClick={this.selectedRoute}>{res.title}</Link></div>
+                      className = 'pageLink selected';
                     }
-                    return <div className="normal" key={res.id}><Link to={res.link} className="pageLink" data-index={res.id} onClick={this.selectedRoute}>{res.title}</Link></div>
+                    return <div className="normal" key={res.id}><Link to={res.link} className={className} data-index={res.id} onClick={this.selectedRoute} onMouseEnter={this.selectedRoute}>{res.title}</Link></div>
                   })}
                 </div>
               </div>
               <div className="bottom">
-                <div>
+                <div className="botWrap">
                   {subRouteList.map(res => {
-                    return <div className="subRoute" key={res.id}><Link to={res.link} className="subPageLink subSelected" data-id={res.mainId} data-index={res.subId}>{res.title}</Link></div>
+                    let className = 'subRoute';
+                    let className2 = 'subPageLink';
+                    if(selectedPage === res.mainId){
+                      className = 'subRoute displayBlock';
+                    }
+                    if(selectedSubPage === res.id){
+                      className2 = 'subPageLink subSelected';
+                    }
+                    return <div className={className} key={res.id}><Link to={res.link} className={className2} data-id={res.id} data-index={res.subId} onClick={this.selectedSubPage}>{res.title}</Link></div>
                   })}
                 </div>
               </div>
@@ -125,7 +135,8 @@ class App extends React.Component {
     this.slideMenu();
     window.onpopstate  = () => {
       if(window.location.pathname === '/'){
-        this.goPage(true)
+        const { goIndex } = this.props;
+        goIndex();
       };
     };
   };
@@ -134,26 +145,28 @@ class App extends React.Component {
     this.slideMenu();
   }
 
-  goPage = (bool) => {
-    const { indexChange } = this.props;
-    if(bool === true){
-      indexChange(true);
-    }else{
-      indexChange(false);
-    }
+  goPage = (e) => {
+    const { goPage } = this.props;
+    goPage(e.target.dataset.index);
   };
 
   selectedRoute = (e) => {
     const { pageSelect } = this.props;
     const index = e.target.dataset.index;
-    const link = document.querySelectorAll('.pageLink');
-    Array.from(link).map(res => {
-      res.classList.remove('selected');
-      return null;
-    });
-    link[index-1].classList.add('selected');
+    // const link = document.querySelectorAll('.pageLink');
+    // Array.from(link).map(res => {
+    //   res.classList.remove('selected');
+    //   return null;
+    // });
+    // link[index-1].classList.add('selected');
     pageSelect(index);
   };
+
+  selectedSubPage = (e) => {
+    const { subPageSelect } = this.props;
+    const index = e.target.dataset.id;
+    subPageSelect(index);
+  }
 
   slideMenu = () => {
     const { isIndex } = this.props;

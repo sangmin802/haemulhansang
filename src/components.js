@@ -11,15 +11,22 @@ export default {
   App : connect((state) => {
     return {
       isIndex : state.isIndex,
-      selectedPage : state.selectedPage
+      selectedPage : state.selectedPage,
+      selectedSubPage : state.selectedSubPage
     };
   }, (dispatch) => {
     return {
-      indexChange : (bool) => {
-        dispatch({type : 'goPage', isIndex : bool});
+      goPage : (index) => {
+        dispatch({type : 'goPage', selectedPage : index});
+      },
+      goIndex : () => {
+        dispatch({type : 'goIndex'});
       },
       pageSelect : (index) => {
         dispatch({type : 'pageSelect', pageIndex : index});
+      },
+      subPageSelect : (subIndex) => {
+        dispatch({type : 'subPageSelect', subPageIndex : subIndex});
       }
     }
   })(App),

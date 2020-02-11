@@ -6,6 +6,7 @@ export default createStore((state, action) => {
       const state = {
         isIndex : true,
         selectedPage : null,
+        selectedSubPage : 1,
       };
       sessionStorage.setItem('state', JSON.stringify(state));
       return state;
@@ -15,9 +16,16 @@ export default createStore((state, action) => {
   }else{
     const newState = { ...state };
     if(action.type === 'goPage'){
-      newState.isIndex = action.isIndex;
+      newState.isIndex = false;
+      newState.selectedPage = Number(action.selectedPage);
+    }else if(action.type === 'goIndex'){
+      newState.isIndex = true;
+      newState.selectedPage = null;
+      newState.selectedSubPage = 1;
     }else if(action.type === 'pageSelect'){
       newState.selectedPage = Number(action.pageIndex);
+    }else if(action.type === 'subPageSelect'){
+      newState.selectedSubPage = Number(action.subPageIndex);
     }
     sessionStorage.setItem('state', JSON.stringify(newState));
     return newState;

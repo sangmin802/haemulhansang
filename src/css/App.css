@@ -111,8 +111,42 @@
   margin : 0 2vw;
   font-weight : bold;
 }
+.selected {
+  color : #006835;
+}
 .pageRoute .bottom {
+  width : 100%;
+  height : 50px;
   position : absolute;
+  left : 0;
+  background : rgba(49,101,48,0.9);
+  z-index : 99;
+}
+.pageRoute .bottom .botWrap {
+  max-width : 1350px;
+  min-width : 1350px;
+  height : 100%;
+  margin : 0 auto;
+  display : flex;
+  flex-wrap : wrap;
+  justify-content : center;
+  align-items : center;
+}
+.pageRoute .bottom .botWrap .subRoute {
+  display : none;
+  margin : 0 1.5vw;
+}
+.botWrap .subRoute a {
+  color : #dddddd;
+  font-size : 0.9em;
+}
+.botWrap .subRoute a:hover {
+  color : white;
+  font-weight : bold;
+}
+.subSelected {
+  color : white !important;
+  font-weight : bold;
 }
 
 .footer {
@@ -179,6 +213,6 @@
   padding : 0 200px;
 }
 
-.selected {
-  color : #006835;
+.displayBlock {
+  display : block !important;
 }
