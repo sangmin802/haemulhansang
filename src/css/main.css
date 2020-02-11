@@ -1,0 +1,146 @@
+.mainComponent {
+  display : flex;
+  flex-wrap : wrap;
+}
+.mainComponent .mainImg {
+  position : relative;
+  left : -200px;
+  width : 66%;
+  height : 100vh;
+  background : url('/img/index/main_visual.jpg') no-repeat;
+  background-position : center center;
+  opacity : 0;
+}
+.imgAni {
+  animation : mainImgMove;
+  animation-duration : 7s;
+  animation-fill-mode : forwards;
+}
+@keyframes mainImgMove {
+  30% { opacity : 1; left : 0 }
+  100% { opacity : 1; left : 0 }
+}
+.mainComponent .mainNav {
+  position : relative;
+  right : -200px;
+  width : 34%;
+  height : 100vh;
+  padding : 40px 44px;
+  background : url('/img/index/main_con_bg.jpg') no-repeat;
+  background-size : cover;
+  opacity : 0;
+}
+.navAni {
+  animation : mainNavMove;
+  animation-duration : 7s;
+  animation-fill-mode : forwards;
+}
+@keyframes mainNavMove {
+  30% { opacity : 1; right : 0 }
+  100% { opacity : 1; right : 0 }
+}
+.mainComponent .mainNav .menuContent {
+  cursor : pointer;
+}
+.mainComponent .mainNav .title {
+  font-size : 1.375em;
+  font-weight : 560;
+}
+.mainComponent .mainNav .text {
+  font-size : 0.875em;
+  color : #5d5d5d;
+  font-weight : 400;
+  line-height : 22px;
+  margin : 18px 0 26px;
+}
+.mainComponent .mainNav .arrow {
+  position : relative;
+  width : 48px;
+  height : 12px;
+}
+.mainComponent .mainNav .arrow::after {
+  content : '';
+  position : absolute;
+  background : url('/img/index/main_con_arrow.png') no-repeat;
+  width : 48px;
+  height : 12px;
+}
+.mainComponent .mainNav .menu1 {
+  position : relative;
+  background : url('/img/index/main_con_img.png') no-repeat;
+  background-position : right;
+  border-bottom : 1px solid #0a8b04;
+  padding : 43px 0 54px;
+}
+.mainComponent .mainNav .menu1::after {
+  content : '';
+  width : 156px;
+  height : 35px;
+  position : absolute;
+  background : url('/img/index/main_con_line.png') no-repeat;
+  bottom : 0;
+  right : 0;
+}
+.mainNav .menu1 .title {
+  color : #006835;
+  font-size : 1.375em;
+  background : url('/img/index/main_con_logo.png') no-repeat;
+  background-position : 0 center;
+  padding-left : 96px;
+}
+
+.mainComponent .mainNav .menu2 {
+  position : relative;
+  border-bottom : 1px solid #0a8b04;
+  padding : 43px 0 54px;
+}
+.mainNav .menu2 .menu2Img {
+  height : 193px;
+  margin-bottom : 20px;
+  background : url('/img/index/main_con_img2.png') no-repeat;
+}
+.mainNav .menu2 .title {
+  color : #744d28;
+  font-size : 1.375em;
+  background : url('/img/index/main_con_logo2.png') no-repeat;
+  background-position : 0 center;
+  padding-left : 96px;
+}
+.mainNav .menu2 .menu2Content {
+  position : relative;
+  width : 80%;
+  margin : 0 auto;
+}
+.mainNav .menu2 .menu2Content::after {
+  content : '';
+  position : absolute;
+  background : url('/img/index/main_con_arrow.png') no-repeat;
+  top : 50%;
+  margin-top : 100px;
+  right : 0;
+  width : 48px;
+  height : 12px;
+}
+.mainComponent .mainNav .menu2::after {
+  content : '';
+  width : 156px;
+  height : 35px;
+  position : absolute;
+  background : url('/img/index/main_con_line2.png') no-repeat;
+  bottom : 0;
+  left : 0;
+}
+
+.mainComponent .mainNav .menu3 {
+  padding : 43px 0 54px;
+  display : flex;
+}
+.mainNav .menu3 .menu3Content {
+  padding-left : 240px;
+  background : url('/img/index/main_con_img3.png') no-repeat;
+}
+.mainNav .menu3 .title {
+  color : black;
+  font-size : 1.375em;
+  background-position : 0 center;
+}
