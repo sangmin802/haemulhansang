@@ -4,8 +4,7 @@ import App from './components/App.js';
 import Main from './components/main.js';
 
 import About from './components/about/about.js';
-import Intro from './components/about/intro.js';
-import Comp from './components/about/comp.js';
+
 
 export default {
   App : connect((state) => {
@@ -34,6 +33,4 @@ export default {
 
   // About
   About : connect()(About),
-  Intro : connect()(Intro),
-  Comp : connect()(Comp),
 };

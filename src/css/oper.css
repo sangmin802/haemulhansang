@@ -1,0 +1,43 @@
+.operContent {
+  max-width : 1350px;
+  margin : 0 auto;
+  text-align : center;
+  padding : 0 8vw;
+}
+.operContent .title {
+  display : flex;
+  flex-wrap : wrap;
+  justify-content : flex-start;
+  position : relative;
+  border-bottom : 1px solid #0a8b04;
+  padding-bottom : 1vh;
+  margin-bottom : 4vh;
+}
+.operContent .title::after {
+  content : '';
+  position : absolute;
+  width : 156px;
+  height : 35px;
+  background : url('/img/about/about/main_con_line.png') no-repeat;
+  right : 0;
+  bottom : 0;
+  margin-right : -10px;
+}
+.operContent .title .logo {
+  margin : 0 4vw 0 2.5vw;
+}
+.operContent .detailContent {
+  font-size : 1em;
+  line-height : 1.5em;
+  letter-spacing : -1px;
+}
+.operContent .detailContent span {
+  font-weight : bold;
+  color : #316530;
+}
+.operContent .headMaster {
+  margin-top : 2.5vh;
+}
+.operContent .headMaster img {
+  margin-left : 1vw;
+}

@@ -1,0 +1,125 @@
+.introContent .section1 {
+  max-width : 1024px;
+  margin : 0 auto 18vh;
+  display : flex;
+  flex-wrap : wrap;
+  justify-content : space-between;
+  align-items : center;
+}
+.introContent .section1 .img {
+  margin-right : 6vw;
+}
+.introContent .text .halfTitle {
+  font-size : 2.25em;
+  font-weight : bold;
+  letter-spacing : -0.06em;
+  margin-bottom : 20px;
+}
+.introContent .text .halfText {
+  color : #444;
+  font-size : 1.125em;
+  letter-spacing : -1px;
+  line-height : 2.2vh;
+  word-break : keep-all;
+  font-weight : 500;
+}
+.introContent .text .fullTitle {
+  font-size : 2.25em;
+  font-weight : bold;
+  letter-spacing : -0.06em;
+  margin-bottom : 20px;
+  color : white;
+}
+.introContent .text .fullText {
+  color : white;
+  font-size : 1.125em;
+  letter-spacing : -1px;
+  line-height : 2.2vh;
+  word-break : keep-all;
+  font-weight : 500;
+}
+
+.introContent .section2 {
+  width : 100%;
+  height : 345px;
+  padding : 96px 0 75px;
+  background : url('/img/about/intro/Binfo_bg.jpg') no-repeat;
+  background-size : cover;
+  background-position : center;
+  margin-bottom : 18vh;
+}
+.introContent .section2 .text {
+  max-width : 1024px;
+  margin : 0 auto;
+  display : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.introContent .section2 .text div {
+  width : 675px;
+}
+.introContent .section2 .text .text2 {
+  text-align : center;
+}
+
+.introContent .section3 {
+  max-width : 1024px;
+  margin : 0 auto 18vh;
+  display : flex;
+}
+.introContent .section3 .img {
+  max-width : 620px;
+  min-width : 280px;
+}
+
+.introContent .section4 {
+  width : 100%;
+  height : 427px;
+  padding : 96px 0 75px;
+  background : url('/img/about/intro/Binfo_bg2.jpg') no-repeat;
+  background-size : cover;
+  background-position : center;
+  margin-bottom : 18vh;
+}
+.introContent .section4 .text {
+  max-width : 1024px;
+  margin : 0 auto;
+  display : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.introContent .section4 .text div {
+  width : 675px;
+}
+.introContent .section4 .text .text2 {
+  text-align : center;
+}
+
+.introContent .section5 {
+  max-width : 1024px;
+  margin : 0 auto 18vh;
+  display : flex;
+  align-items : center;
+}
+.introContent .section5 img {
+  margin-right : 20px;
+}
+
+.section6 {
+  max-width : 1024px;
+  margin : 0 auto;
+  display : flex;
+  flex-direction : column;
+  align-items : center;
+}
+.section6 .img {
+  margin-bottom : 8vh;
+}
+.section6 .text .text1 {
+  margin-bottom : 4vh;
+}
+.section6 .text .text2 {
+  text-align : center;
+}

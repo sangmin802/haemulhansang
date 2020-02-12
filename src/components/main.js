@@ -48,10 +48,14 @@ class Main extends React.Component {
   };
 
   componentDidMount = () => {
-    document.querySelector('.mainImg').classList.add('imgAni');
-    setTimeout(() => {
-      document.querySelector('.mainNav').classList.add('navAni');
-    }, 1000)
+    const nav = document.querySelector('.mainNav').classList;
+    const img = document.querySelector('.mainImg').classList;
+    if((nav && img) !== null){
+      img.add('imgAni');
+      setTimeout(() => {
+        nav.add('navAni');
+      }, 1000)
+    }
   };
 };
 
