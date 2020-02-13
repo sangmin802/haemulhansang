@@ -5,7 +5,10 @@ export default createStore((state, action) => {
     if(JSON.parse(sessionStorage.getItem('state')) === null){
       const state = {
         isIndex : true,
+        isLoading : true,
         selectedPage : null,
+        routeList : [],
+        subRouteList : [],
         selectedSubPage : 1,
       };
       sessionStorage.setItem('state', JSON.stringify(state));
@@ -15,7 +18,11 @@ export default createStore((state, action) => {
     }
   }else{
     const newState = { ...state };
-    if(action.type === 'goPage'){
+    if(action.type === 'loaded'){
+      newState.isLoading = false;
+      newState.routeList = action.data.routeList;
+      newState.subRouteList = action.data.subRouteList;
+    }else if(action.type === 'goPage'){
       newState.isIndex = false;
       newState.selectedPage = Number(action.selectedPage);
     }else if(action.type === 'goIndex'){
