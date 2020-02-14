@@ -1,0 +1,94 @@
+.fran2Content {
+  max-width : 1350px;
+  padding : 0 20px;
+  margin : 0 auto;
+}
+.fran2Content .img {
+  width : 50%;
+}
+.fran2Content .img img {
+  display : block;
+  width : 100%;
+}
+.fran2Content .section .text {
+  width : 45%;
+}
+.fran2Content .section .title {
+  font-size : 2.5em;
+  font-weight : bold;
+  margin-bottom : 3vh;
+  color : #316530;
+}
+.fran2Content .section .desc {
+  position : relative;
+  font-size : 1em;
+  font-weight : 400;
+  color : #353535;
+  word-break : keep-all;
+  letter-spacing : -0.025em;
+  border-bottom : 1px solid #316530;
+  padding-bottom : 2vh;
+}
+.fran2Content .section:nth-child(2n) .desc::after {
+  content : '';
+  position : absolute;
+  background : url('/img/fran/fran2/menuCp_line.png') no-repeat;
+  width : 156px;
+  height : 35px;
+  right : -10px;
+  bottom : 0;
+}
+.fran2Content .section:nth-child(2n-1) .desc::after {
+  content : '';
+  position : absolute;
+  background : url('/img/fran/fran2/menuCp_line2.png') no-repeat;
+  width : 156px;
+  height : 35px;
+  left : -10px;
+  bottom : 0;
+}
+.fran2Content .sectionType1 .img {
+  margin-right : 5%;
+}
+.fran2Content .sectionType1 .text {
+  text-align : left;
+}
+.fran2Content .sectionType2 .img {
+  margin-left : 5%;
+}
+.fran2Content .sectionType2 .text {
+  text-align : right;
+}
+
+.fran2Content .logo {
+  position : relative;
+  text-align : center;
+  margin-bottom : 60px;
+}
+.fran2Content .logo::before {
+  content : '';
+  position : absolute;
+  width : 34px;
+  height : 47px;
+  background : url('/img/about/comp/sstit.png') no-repeat;
+  left : 50%;
+  margin-left : -124px;
+  top : -15px;
+}
+.fran2Content .logo::after {
+  content : 'Menu Competitive';
+  position : absolute;
+  letter-spacing : -1.2px;
+  color : #1c4834;
+  font-size : 1em;
+  font-weight : bold;
+  left : 50%;
+  margin-left : -62.5px;
+  top : -20px;
+}
+.fran2Content .section {
+  display : flex;
+  flex-wrap : wrap;
+  align-items : center;
+  margin : 80px 0;
+}

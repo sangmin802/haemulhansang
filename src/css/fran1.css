@@ -1,0 +1,116 @@
+.fran1Content {
+  max-width : 1024px;
+  margin : 0 auto;
+}
+.fran1Content .titleImg {
+  text-align : center;
+  margin-bottom : 6vh;
+}
+.fran1Content .titleImg .title {
+  position : relative;
+  font-size : 1em;
+  color : #1c4834;
+  font-weight : bold;
+  letter-spacing : -1px;
+  margin-bottom : 4px;
+}
+.fran1Content .titleImg .title::before {
+  content : '';
+  position : absolute;
+  background : url('/img/fran/fran1/sstit.png') no-repeat;
+  width : 40px;
+  height : 60px;
+  left : 50%;
+  margin-left : -90px;
+  top : 3px;
+}
+.fran1Content .VAT {
+  font-size : 1em;
+  color : #316030;
+  text-align : right;
+  font-weight : 500;
+  margin-right : 2vw;
+  margin-bottom : 2vh;
+}
+.fran1Content .openCostInfo {
+  display : flex;
+  flex-wrap : wrap;
+}
+.fran1Content .openCostInfo div {
+  width : calc((97% / 4) - 0.01px);
+  height : 57px;
+  display : flex;
+  align-items : center;
+  justify-content : center;
+  margin-right : 1%;
+  margin-bottom : 2%;
+}
+.fran1Content .openCostInfo .title {
+  font-size : 1.375em;
+  background : url('/img/fran/fran1/infoT_bg.png') no-repeat;
+  font-weight : bold;
+  background-position : center;
+  color : white;
+}
+.fran1Content .openCostInfo .info {
+  font-size : 1em;
+  background : url('/img/fran/fran1/infoT_bg2.png') no-repeat;
+  background-position : center;
+  color : black;
+}
+.fran1Content .openCostInfo .info:nth-child(4n){
+  color : #666;
+}
+.fran1Content .openCostInfo div:nth-child(4n) {
+  margin-right : 0;
+}
+.fran1Content .subInfo {
+  margin-left : 2vw;
+  margin-bottom : 16vh;
+}
+.fran1Content .subInfo li {
+  font-size : 0.875em;
+  color : #666;
+}
+.fran1Content .openProInfo {
+  display : flex;
+  flex-wrap : wrap;
+  justify-content : space-between;
+}
+.fran1Content .openProInfo .openProStep {
+  width : calc((97% / 4) - 0.01px);
+  min-height : 192px;
+  padding : 59px 20px 30px;
+  background : url('/img/fran/fran1/info_bg.png') no-repeat;
+  background-size : 100% 100%;
+  margin-right : 1%;
+  margin-bottom : 3%;
+}
+.fran1Content .openProInfo .openProStep:nth-child(4n) {
+  margin-right : 0;
+}
+.fran1Content .openProInfo .openProStep .numberImg {
+  position : relative;
+}
+.fran1Content .openProInfo .openProStep .numberImg::before {
+  content : '';
+  position : absolute;
+  background : url('/img/fran/fran1/info_line.png') no-repeat;
+  width : 117px;
+  height : 22px;
+  left : -13px;
+  top : 30px;
+}
+.fran1Content .openProInfo .openProStep .title {
+  margin : 40px 0 10px;
+  font-size : 1.175em;
+  font-weight : bold;
+  letter-spacing : -1px;
+  word-break : break-all;
+}
+.fran1Content .openProInfo .openProStep .desc {
+  font-size : 0.925em;
+  letter-spacing : -1px;
+  color : #666;
+  word-break : break-all;
+}

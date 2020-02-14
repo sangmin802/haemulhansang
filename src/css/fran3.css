@@ -1,0 +1,123 @@
+.fran3Content {
+  max-width : 1024px;
+  margin : 0 auto;
+}
+.fran3Content .logo {
+  position : relative;
+  text-align : center;
+  margin-bottom : 60px;
+}
+.fran3Content .logo::before {
+  content : '';
+  position : absolute;
+  width : 34px;
+  height : 47px;
+  background : url('/img/about/comp/sstit.png') no-repeat;
+  left : 50%;
+  margin-left : -94px;
+  top : -15px;
+}
+.fran3Content .logo::after {
+  content : 'Inquire';
+  position : absolute;
+  letter-spacing : -1.2px;
+  color : #1c4834;
+  font-size : 1em;
+  font-weight : bold;
+  left : 50%;
+  margin-left : -50px;
+  top : -20px;
+}
+
+.fran3Form {
+  width : 50%;
+  margin : 0 auto;
+}
+.fran3Form > div {
+  display : flex;
+  align-items : center;
+  margin-bottom : 2vh;
+}
+.fran3Form > div .label {
+  width : 25%;
+  color : #316530;
+  font-weight : bold;
+  text-align : center;
+}
+.fran3Form > div .type {
+  width : 75%;
+}
+.fran3Form > div .type input, .fran3Form > div .type textarea {
+  width : 100%;
+  border-radius : 5px;
+  border : 1px solid #b5b5b5;
+  padding : 5px;
+}
+.fran3Form > div .type input {
+  height : 30px;
+}
+.fran3Form > div .type textarea {
+  height : 100px;
+}
+.fran3Form .file .type {
+  display : flex;
+}
+.fran3Form .file .type .uploadedFile {
+  width : 70%;
+  height : 30px;
+  border-radius : 5px;
+  border : 1px solid #b5b5b5;
+  padding : 5px;
+  color : #666666;
+  font-size : 0.875em;
+}
+.fran3Form .file .type .upload {
+  display : inline-block;
+  width : 25%;
+  height : 30px;
+  margin-left : 5%;
+  text-align : center;
+  line-height : 30px;
+  border : 1px solid #316530;
+  color : #316530;
+  border-radius : 5px;
+  cursor : pointer;
+}
+.fran3Form .file .type input {
+  display : none;
+}
+.fran3Form .checkbox {
+  display : block;
+  margin-left : 25%;
+}
+.fran3Form .checkbox .short {
+  font-size : 0.875em;
+  color : #666;
+  margin-left : 5px;
+  letter-spacing : -1px;
+}
+.fran3Form .checkbox .showLong {
+  position : relative;
+  text-decoration : underline;
+  font-size : 0.8em;
+  color : #474747;
+  letter-spacing : -1px;
+  margin-left : 15px;
+}
+.fran3Form .checkbox .showLong::after {
+  content : '(필수)';
+  color : #316530;
+  margin-left : 10px;
+}
+.fran3Form .btn input {
+  margin : 0 auto;
+  display : inline-block;
+  width : 130px;
+  height : 39px;
+  background : #316530;
+  color : white;
+  font-weight : bold;
+  border-radius : 15px;
+  border : none;
+  cursor : pointer;
+}

@@ -10,6 +10,9 @@ class MenuTitle extends React.Component {
     }else if(url.indexOf('menu') !== -1){
       desc = `바다느낌 가득한\n해물한상의 메뉴를 소개합니다.`;
       src = "/img/menu/sub_tit2.png";
+    }else if(url.indexOf('franchise') !== -1){
+      desc = `성공창업의 든든한 파트너!\n해물한상을 소개합니다.`;
+      src = "/img/fran/sub_tit3.png";
     }
     return(
       <div className="menuTitle">

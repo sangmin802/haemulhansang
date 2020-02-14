@@ -23,7 +23,7 @@ class App extends React.Component {
               <ul className="route">
                 <li className="normal"><Link to='/about/oper' data-index = '1' onClick={this.goPage.bind(this)}>ABOUT US</Link></li>
                 <li className="normal"><Link to='/menu/menu1' data-index = '2' onClick={this.goPage.bind(this)}>MENU</Link></li>
-                <li className="normal"><Link to='' data-index = '3' onClick={this.goPage.bind(this)}>FRANCHISE</Link></li>
+                <li className="normal"><Link to='/franchise/fran1' data-index = '3' onClick={this.goPage.bind(this)}>FRANCHISE</Link></li>
                 <li className="normal"><Link to='' data-index = '4' onClick={this.goPage.bind(this)}>STORE</Link></li>
                 <li className="normal"><Link to='' data-index = '5' onClick={this.goPage.bind(this)}>COMMUNITY</Link></li>
                 <li className="notNormal1 notNormal"><Link to='' onClick={this.goPage}>메뉴경쟁력</Link></li>
@@ -70,8 +70,7 @@ class App extends React.Component {
           <Route exact path="/"  component={Components.Main} />
           <Route path="/about/:value" component={Components.About} />
           <Route path="/menu/:value" component={Components.Menu} />
-          {/* <Route path="/about/intro" component={Components.Intro} />
-          <Route path="/about/comp" component={Components.Comp} /> */}
+          <Route path="/franchise/:value" component={Components.Fran} />
           <footer className="footer">
             <div className="topWrap">
               <div className="brand">
