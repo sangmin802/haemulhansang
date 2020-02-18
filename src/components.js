@@ -6,6 +6,7 @@ import Main from './components/main.js';
 import About from './components/about/about.js';
 import Menu from './components/menu/menu.js';
 import Fran from './components/fran/fran.js';
+import Store from './components/store/store.js';
 
 export default {
   App : connect((state) => {
@@ -48,6 +49,16 @@ export default {
     }
   })(About),
 
+  // Fran
+  Fran : connect((state) => {
+    return {
+      selectedPage : state.selectedPage,
+      selectedSubPage : state.selectedSubPage,
+      routeList : state.routeList,
+      subRouteList : state.subRouteList      
+    };
+  })(Fran),
+
   // Menu
   Menu : connect((state) => {
     return {
@@ -58,13 +69,13 @@ export default {
     }
   })(Menu),
 
-  // Fran
-  Fran : connect((state) => {
+  // Store
+  Store : connect((state) => {
     return {
       selectedPage : state.selectedPage,
       selectedSubPage : state.selectedSubPage,
       routeList : state.routeList,
-      subRouteList : state.subRouteList      
-    };
-  })(Fran)
+      subRouteList : state.subRouteList
+    }
+  })(Store),
 };

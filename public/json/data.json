@@ -3,7 +3,7 @@
     { "id" : 1, "title" : "ABOUT US", "link" : "/about/oper" },
     { "id" : 2, "title" : "MENU", "link" : "/menu/menu1" },
     { "id" : 3, "title" : "FRANCHISE", "link" : "/franchise/fran1" },
-    { "id" : 4, "title" : "STORE", "link" : "" },
+    { "id" : 4, "title" : "STORE", "link" : "/store/store1" },
     { "id" : 5, "title" : "COMMUNITY", "link" : "" }
   ],
   "subRouteList" : [

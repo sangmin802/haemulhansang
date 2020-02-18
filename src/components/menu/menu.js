@@ -96,7 +96,6 @@ class Menu extends React.Component {
     const img1 = document.querySelector('.img1').classList;
     const img2 = document.querySelector('.img2').classList;
     const img3 = document.querySelector('.img3').classList;
-
     // if((img1 && img2 && img3) !== null){
       img1.add('img1Ani');
       return new Promise((resolve, reject) => {
@@ -109,8 +108,8 @@ class Menu extends React.Component {
           img3.add('img3Ani');
         });
       });
-    };
-  // };
+    // };
+  };
 
   comma = (number) => {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
