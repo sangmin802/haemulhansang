@@ -1,0 +1,50 @@
+.store2Content {
+  max-width : 1350px;
+  margin : 0 auto;
+}
+.store2Content .title {
+  position : relative;
+  margin-bottom : 6vh;
+  padding-left : 40px;
+}
+.store2Content .title::before {
+  content : '';
+  position : absolute;
+  background : url('/img/store/sstit.png') no-repeat;
+  width : 40px;
+  height : 60px;
+  left : 0;
+  top : -20px;
+}
+.store2Content .title::after {
+  content : 'photo gallery';
+  position : absolute;
+  color : #1c4834;
+  font-weight : bold;
+  letter-spacing : -1px;
+  top : -20px;
+  left : 44px;
+}
+.store2Content .galleryWrap {
+  border-top : 3px solid #316530;
+  border-bottom : 3px solid #316530;
+  padding : 2% 0;
+  display : flex;
+  flex-wrap : wrap;
+}
+.store2Content .galleryWrap .gallery {
+  width : 23.5%;
+  margin-right : 2%;
+  cursor : pointer;
+}
+.store2Content .galleryWrap .gallery:hover {
+  animation : border;
+  animation-duration : .5s;
+}
+.store2Content .galleryWrap .gallery img {
+  display : block;
+  width : 100%;
+}
+.store2Content .galleryWrap .gallery:nth-child(4n) {
+  margin-right : 0;
+}

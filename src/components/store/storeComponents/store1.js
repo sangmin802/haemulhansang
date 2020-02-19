@@ -30,6 +30,7 @@ class Store1 extends React.Component {
       if(first !== '시/도 선택' && Object.keys(res)[0] === first){
         secondList = res[first];
       };
+      return null;
     });
     
     let selectedStore = [];
@@ -44,7 +45,6 @@ class Store1 extends React.Component {
     }else{
       selectedStore = storeData.filter(res => this.removeSpace(res.name).indexOf(this.removeSpace(typeSearch)) !== -1);
     }
-    console.log(typeSearch)
     return(
       <div className="store1Content">
         <div className="searchArea">
@@ -82,18 +82,21 @@ class Store1 extends React.Component {
                 <div className="img">
                   <img src={`/img/store/findstore/${res.img}`} alt={res.name}/>
                 </div>
-                <div className="title">
-                  {res.name}
-                </div>
                 <div className="desc">
-                  <div className="position">
-                    {res.address}
+                  <div className="title">
+                    {res.name}
                   </div>
-                  <div className="tel">
-                    {res.tel}
+                  <div className="position dataWrap">
+                    <div className="label">매장위치</div>
+                    <div className="data">{res.address}</div>
                   </div>
-                  <div className="time">
-                    {res.time}
+                  <div className="tel dataWrap">
+                    <div className="label">전화번호</div>
+                    <div className="data">{res.tel}</div>
+                  </div>
+                  <div className="time dataWrap">
+                    <div className="label">영업시간</div>
+                    <div className="data">{res.time}</div>
                   </div>
                 </div>
               </div>
