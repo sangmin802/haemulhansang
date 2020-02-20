@@ -6,12 +6,16 @@ class Store3 extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      interior : true
+      interior : true,
+      touchEnd : null,
+      width : null,
+      prevIndex : null
     };
     window.addEventListener('resize', () => {
       const img = document.querySelectorAll('.slideImg');
       Array.from(img).map((res, index) => {
         const width = res.width;
+        this.setState({width : width});
         if(index === 6){
           res.style.left = -width+'px';
         }else{
@@ -84,13 +88,17 @@ class Store3 extends React.Component {
           {interior ? 
             <div className="imgSlide">
               {arr.map((res, index) => {
-                return <img key={index} src={`/img/store/interior/interior${res}.jpg`} width="100%" alt={`interior${res}`} className="slideImg" onMouseDown={this.mouseDown} />
+                return <img key={index} src={`/img/store/interior/interior${res}.jpg`} width="100%" alt={`interior${res}`} className="slideImg" onMouseDown={this.mouseDown} onMouseMove={this.mouseMove} onMouseUp={() => {
+                  this.touch = false;
+                }} />
               })}
             </div>
             :
             <div className="imgSlide">
               {arr.map((res, index) => {
-                return <img key={index} src={`/img/store/exterior1/exterior${res}.jpg`} alt={`exterior${res}`} className="slideImg" />
+                return <img key={index} src={`/img/store/exterior1/exterior${res}.jpg`} alt={`exterior${res}`} className="slideImg" onMouseDown={this.mouseDown} onMouseMove={this.mouseMove} onMouseUp={() => {
+                  this.touch = false;
+                }} />
               })}                  
             </div>
           }
@@ -112,11 +120,16 @@ class Store3 extends React.Component {
     );
   };
 
+  touch = false;
+  slide = false;
+  count = 5;
+  touchStart = null;
+
   componentDidMount = () => {
     const img = document.querySelectorAll('.slideImg');
     Array.from(img).map((res, index) => {
-      // res.style.width = '100%';
       const width = res.width;
+      this.setState({width : width});
       if(index === 6){
         res.style.left = -width+'px';
       }else{
@@ -127,8 +140,86 @@ class Store3 extends React.Component {
   };
 
   mouseDown = (e) => {
-    console.log('?')
-    console.log(e)
+    if(!this.touch){
+      this.touch = true;
+      this.touchStart = e.screenX;
+    }
+  };
+  
+  mouseMove = (e) => {
+    if(this.touch && !this.slide){
+      if(this.touchStart - e.screenX > 300){
+        if(this.count === 6){
+          this.count = 0;
+        }else{
+          this.count = this.count+1;
+        }
+        this.slideNext();
+        setTimeout(() => {
+          this.slide = false;          
+        }, 500);
+      }else if(this.touchStart - e.screenX < -300){
+        this.slidePrev();
+        setTimeout(() => {
+          if(this.count === 0){
+            this.count = 6;
+          }else{
+            this.count = this.count-1;
+          }
+          this.slide = false;          
+        }, 500);
+      }
+    }
+  };
+
+  slideNext = () => {
+    this.touch = false;
+    this.slide = true;
+    const slideList = document.querySelectorAll('.slideImg');
+    const { width } = this.state;
+    Array.from(slideList).map((res, index) => {
+      if(this.count === index){
+        res.style.left = width*(slideList.length-2)+'px';
+      }else{
+        const preleft = Number(res.style.left.replace('px', ''));
+        res.animate([
+          {left : preleft+'px'},
+          {left : preleft-width+'px'},
+        ], {
+          duration : 500,
+          easing : 'ease-in-out',
+          iterations : 1,
+          fill : 'forwards'
+        });
+        res.style.left = preleft-width+'px';
+      }
+      return null;
+    });
+  };
+
+  slidePrev = () => {
+    this.touch = false;
+    this.slide = true;
+    const slideList = document.querySelectorAll('.slideImg');
+    const { width } = this.state;
+    Array.from(slideList).map((res, index) => {
+      if(this.count === index){
+        res.style.left = -width+'px';
+      }else{
+        const preleft = Number(res.style.left.replace('px', ''));
+        res.animate([
+          {left : preleft+'px'},
+          {left : preleft+width+'px'},
+        ], {
+          duration : 500,
+          easing : 'ease-in-out',
+          iterations : 1,
+          fill : 'forwards'
+        });
+        res.style.left = preleft+width+'px';
+      }
+      return null;
+    });
   };
 };
 
