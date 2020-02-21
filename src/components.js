@@ -7,6 +7,7 @@ import About from './components/about/about.js';
 import Menu from './components/menu/menu.js';
 import Fran from './components/fran/fran.js';
 import Store from './components/store/store.js';
+import Commu from './components/commu/commu.js';
 
 export default {
   App : connect((state) => {
@@ -23,8 +24,8 @@ export default {
       loaded : (data) => {
         dispatch({type : 'loaded', data : data, isLoading : false});
       },
-      goPage : (index) => {
-        dispatch({type : 'goPage', selectedPage : index});
+      goPage : (index, subindex) => {
+        dispatch({type : 'goPage', selectedPage : index, selectedSubPage : subindex });
       },
       goIndex : () => {
         dispatch({type : 'goIndex'});
@@ -37,7 +38,20 @@ export default {
       }
     }
   })(App),
-  Main : connect()(Main),
+  Main : connect((state) => {
+    return {
+      subRouteList : state.subRouteList,
+    };
+  }, (dispatch) => {
+    return {
+      goPage : (index, subindex) => {
+        dispatch({type : 'goPage', selectedPage : index, selectedSubPage : subindex });
+      },
+      subPageSelect : (subIndex) => {
+        dispatch({type : 'subPageSelect', subPageIndex : subIndex});
+      }
+    };
+  })(Main),
 
   // About
   About : connect((state) => {
@@ -78,4 +92,14 @@ export default {
       subRouteList : state.subRouteList
     }
   })(Store),
+
+  // Commu
+  Commu : connect((state) => {
+    return {
+      selectedPage : state.selectedPage,
+      selectedSubPage : state.selectedSubPage,
+      routeList : state.routeList,
+      subRouteList : state.subRouteList
+    }
+  })(Commu),
 };

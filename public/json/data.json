@@ -4,7 +4,7 @@
     { "id" : 2, "title" : "MENU", "link" : "/menu/menu1" },
     { "id" : 3, "title" : "FRANCHISE", "link" : "/franchise/fran1" },
     { "id" : 4, "title" : "STORE", "link" : "/store/store1" },
-    { "id" : 5, "title" : "COMMUNITY", "link" : "" }
+    { "id" : 5, "title" : "COMMUNITY", "link" : "/community/commu1" }
   ],
   "subRouteList" : [
     { "id" : 1, "subId" : 1, "mainId" : 1, "title" : "회사소개", "link" : "/about/oper" },

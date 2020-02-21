@@ -11,7 +11,6 @@ class App extends React.Component {
     if(isLoading){
       return <div>Loading...</div>
     }
-    
     return (
       <div className="App">
         <Router>
@@ -25,9 +24,9 @@ class App extends React.Component {
                 <li className="normal"><Link to='/menu/menu1' data-index = '2' onClick={this.goPage.bind(this)}>MENU</Link></li>
                 <li className="normal"><Link to='/franchise/fran1' data-index = '3' onClick={this.goPage.bind(this)}>FRANCHISE</Link></li>
                 <li className="normal"><Link to='/store/store1' data-index = '4' onClick={this.goPage.bind(this)}>STORE</Link></li>
-                <li className="normal"><Link to='' data-index = '5' onClick={this.goPage.bind(this)}>COMMUNITY</Link></li>
-                <li className="notNormal1 notNormal"><Link to='' onClick={this.goPage}>메뉴경쟁력</Link></li>
-                <li className="notNormal2 notNormal"><Link to='' onClick={this.goPage}>매장찾기</Link></li>
+                <li className="normal"><Link to='/community/commu1' data-index = '5' onClick={this.goPage.bind(this)}>COMMUNITY</Link></li>
+                <li className="notNormal1 notNormal"><Link to='/franchise/fran2' data-index = '3' data-subindex = '10' onClick={this.goPage.bind(this)}>메뉴경쟁력</Link></li>
+                <li className="notNormal2 notNormal"><Link to='/store/store1' data-index = '4' onClick={this.goPage}>매장찾기</Link></li>
               </ul>
             </div>
           :
@@ -67,11 +66,12 @@ class App extends React.Component {
               </div>
             </div>
           }
-          <Route exact path="/"  component={Components.Main} />
+          <Route exact path="/" component={Components.Main} />
           <Route path="/about/:value" component={Components.About} />
           <Route path="/menu/:value" component={Components.Menu} />
           <Route path="/franchise/:value" component={Components.Fran} />
           <Route path="/store/:value" component={Components.Store} />
+          <Route path="/community/:value" component={Components.Commu} />
           <footer className="footer">
             <div className="topWrap">
               <div className="brand">
@@ -135,14 +135,18 @@ class App extends React.Component {
   goPage = (e) => {
     const { goPage, subRouteList, subPageSelect } = this.props;
     const baseSubMenuId = subRouteList.filter(res => res.mainId === Number(e.target.dataset.index))[0].id;
-    goPage(e.target.dataset.index);
-    subPageSelect(baseSubMenuId);
+    if(e.target.dataset.subindex === undefined){
+      goPage(e.target.dataset.index, null);
+      subPageSelect(baseSubMenuId);
+    }else{
+      goPage(e.target.dataset.index, e.target.dataset.subindex);
+    }
   };
 
   selectedRoute = (e) => {
     const { pageSelect, subPageSelect } = this.props;
     const index = Number(e.target.dataset.index);
-    
+
     pageSelect(index);
     const { subRouteList } = this.props;
     if(e.nativeEvent.type === 'click'){
@@ -165,9 +169,10 @@ class App extends React.Component {
 
   slideMenu = () => {
     const { isIndex } = this.props;
-    if(isIndex){
+    const indexRoute = document.querySelector('.indexRoute');
+    if(isIndex && indexRoute !== null){
       setTimeout(() => {
-        document.querySelector('.indexRoute').classList.add('indexRouteAni');
+        indexRoute.classList.add('indexRouteAni');
       }, 2000)
     };
   }

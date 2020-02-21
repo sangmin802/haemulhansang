@@ -25,6 +25,9 @@ export default createStore((state, action) => {
     }else if(action.type === 'goPage'){
       newState.isIndex = false;
       newState.selectedPage = Number(action.selectedPage);
+      if(action.selectedSubPage !== null){
+        newState.selectedSubPage = Number(action.selectedSubPage);
+      }
     }else if(action.type === 'goIndex'){
       newState.isIndex = true;
       newState.selectedPage = null;

@@ -16,6 +16,9 @@ class MenuTitle extends React.Component {
     }else if(url.indexOf('store') !== -1){
       desc = `전국 곳곳에 숨어있는 맛집\n해물한상 매장을 소개합니다.`;
       src = "/img/store/sub_tit4.png";
+    }else if(url.indexOf('commu') !== -1){
+      desc = `생동감 있는 해물한상의 스토리`;
+      src = "/img/commu/sub_tit5.png";
     }
 
     return(
@@ -27,10 +30,12 @@ class MenuTitle extends React.Component {
               <img src={src} alt="about us" />
             </div>
             <div className="desc">
-              {
+              {desc.indexOf('\n') !== -1 ? 
                 desc.split('\n').map( line => {
                   return (<span key={line.length}>{line}<br/></span>)
                 })
+                :
+                desc
               }
             </div>
           </div>

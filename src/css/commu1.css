@@ -1,0 +1,69 @@
+.commu1Content {
+  max-width : 1350px;
+  margin : 0 auto;
+}
+.commu1Content .titleImg {
+  position : relative;
+  font-size : 1em;
+  color : #1c4834;
+  font-weight : bold;
+  letter-spacing : -1px;
+  margin-bottom : 4px;
+  padding-left : 40px;
+}
+.commu1Content .titleImg::before {
+  content : '';
+  position : absolute;
+  background : url('/img/commu/sstit.png') no-repeat;
+  width : 40px;
+  height : 60px;
+  left : 0;
+  top : -20px;
+}
+.commu1Content .titleImg::after {
+  content : 'Notice';
+  position : absolute;
+  color : #1c4834;
+  left : 40px;
+  top : -20px;
+}
+.commu1Content .noticeWrap {
+  margin-top : 2.5vw;
+  border-top: 3px solid #316530;
+}
+.commu1Content .noticeWrap .noticeLabelWrap {
+  display : flex;
+  border-bottom : 1px solid #bfbfbf;
+  background : #f7f7f7;
+}
+.commu1Content .noticeWrap .noticeLabelWrap .noticeLabel {
+  font-size : 1.125em;
+  font-weight : bold;
+  color : #265325;
+  padding : 14px 0;
+  display : flex;
+  justify-content : center;
+  border-right : 1px solid #bfbfbf;
+}
+.commu1Content .per5 { width : 5%; }
+.commu1Content .per10 { width : 10%; }
+.commu1Content .per70 { width : 70%; }
+.commu1Content .view { border : 0; }
+.commu1Content .noticeWrap .noticeContentWrap {
+  border-bottom : 1px solid #bfbfbf;
+}
+.commu1Content .noticeWrap .noticeContentWrap .noticeContent {
+  display : flex;
+}
+.commu1Content .noticeWrap .noticeContentWrap .noticeContent .noticeCont { 
+  font-size : 1em;
+  padding : 14px;
+  border-right : 1px solid #bfbfbf; 
+  text-align : center;
+}
+.commu1Content .noticeWrap .noticeContentWrap .noticeContent .title { text-align : left; }
+.commu1Content .noticeWrap .noticeContentWrap .noticeContent .title:hover {
+  text-decoration : underline;
+  cursor : pointer;
+}
+.commu1Content .noticeWrap .noticeContentWrap .noticeContent .view { border : 0; }
