@@ -72,3 +72,74 @@
   overflow: hidden;
   white-space: nowrap;
 }
+
+/* newsInform */
+.newsImformContent {
+  margin-top : 2.5vw;
+  border-top : 2px solid #056437;
+}
+.newsImformContent .newsInformTitle {
+  font-size : 1.25em;
+  padding : 14px 0;
+  color : #333;
+  font-weight : bold;
+  text-align : center;
+  background : #f6f6f6;
+}
+.newsImformContent .newsInformSup {
+  padding : 14px;
+  font-size : 0.938em;
+}
+.newsImformContent .newsInformSup span {
+  color : #777;
+}
+.newsImformContent .newsInformSup > span {
+  border-right : 1px solid #d9d9d9;
+  padding : 0 15px;
+}
+.newsImformContent .newsInformSup > span:first-child {
+  padding-left : 0;
+}
+.newsImformContent .newsInformSup > span:nth-last-child(1) {
+  border-right : 0;
+}
+.newsImformContent .newsInformDesc {
+  padding : 2.5vw 0;
+  font-size : 1em;
+  color : #444444;
+}
+.newsImformContent .newsInformDesc .newsInformImg {
+  margin-bottom : 2vw;
+}
+.newsImformContent .otherNewsBtn > div {
+  display : flex;
+  padding : 20px;
+  border-top : 1px solid rgb(231, 231, 231);
+}
+.newsImformContent .otherNewsBtn > div:nth-last-child(1) {
+  border-bottom : 1px solid rgb(231, 231, 231);
+}
+.newsImformContent .otherNewsBtn > div div, .newsImformContent .otherNewsBtn > div a {
+  color : #777777;
+  font-size : 0.938em;
+}
+.newsImformContent .otherNewsBtn > div .label {
+  position : relative;
+  padding-right : 40px;
+}
+.newsImformContent .otherNewsBtn > div .label::after {
+  content : '';
+  position : absolute;
+  width : 7px;
+  height : 7px;
+  border-right : 2px solid #999;
+  border-bottom : 2px solid #999;
+  right : 0;
+  margin-right : 20px;
+  top : 5px;
+  transform : rotate(45deg);
+}
+.newsImformContent .otherNewsBtn > div:first-child .label::after {
+  top : 8px;
+  transform : rotate(-135deg);
+}

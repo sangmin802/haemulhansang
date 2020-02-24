@@ -1,6 +1,9 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 
 import '../../../css/commu2.css';
+import NewsInform from './newsInform.js';
+import NewsWrap from './newsWrap.js';
 
 class Commu2 extends React.Component {
   state = {
@@ -8,7 +11,8 @@ class Commu2 extends React.Component {
     data : []
   }
   render(){
-    const { isLoading, data } = this.state
+    const { isLoading, data } = this.state;
+    
     if(isLoading){
       return(
         <div>Loading...</div>
@@ -22,38 +26,21 @@ class Commu2 extends React.Component {
         <div className="titleImg">
           <img src="/img/commu/commu2/news_tit.png" alt="언론보도" />
         </div>
-        <div className="newsWrap">
-          {data.map(res => {
-            return (
-              <div className="newsCont" key={res.id}>
-                <div className="img">
-                  <img src={`/img/commu/commu2/news${res.id}.jpg`} alt={res.title} />
-                </div>
-                <div className="newsInfo">
-                  <div className="date">
-                    {res.created}
-                  </div>
-                  <div className="title">
-                    {res.title}
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        <Route exact path="/community/commu2" render = {(props) => (<NewsWrap {...props} data = {data} />)} />
+        <Route path="/community/commu2/:id"  render = {(props) => (<NewsInform {...props} data = {data} />)} />
       </div>
     );
   };
 
-  noticeLoad = async () => {
+  newsLoad = async () => {
     await fetch('/json/news.json').then(response => response.json()).then(data => {
       this.setState({isLoading : false, data : data});
     })
-  }
+  };
 
   componentDidMount = () => {
-    this.noticeLoad();
-  }
+    this.newsLoad();
+  };
 };
 
 export default Commu2;

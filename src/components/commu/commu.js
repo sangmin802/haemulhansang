@@ -12,7 +12,7 @@ class Commu extends React.Component {
     const { match : { url } } = this.props;
     const { subRouteList } = this.props;
     const matchMenu = subRouteList.find(res => res.link === url)
-
+    
     let component;
     const { title } = matchMenu;
     if(value === 'commu1'){
