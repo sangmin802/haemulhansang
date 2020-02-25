@@ -21,7 +21,7 @@ class NewsInform extends React.Component {
     const nextNews = data.find(res => news.id+1 === res.id);
     
     return(
-      <div className="newsImformContent">
+      <div className="newsInformContent">
         <div className="newsInformTitle">
           {news.title}
         </div>
@@ -52,6 +52,9 @@ class NewsInform extends React.Component {
             </div>
           </div>
         </div>
+        <div className="goList">
+          <Link to="/community/commu2"><span>목록</span></Link>
+        </div>
       </div>
     );
   };
@@ -67,7 +70,6 @@ class NewsInform extends React.Component {
   }
 
   componentDidUpdate = (prevProps) => {
-    const { match : { params : { id } } } = prevProps;
     const preId = this.props.match.params.id
     const prvId = prevProps.match.params.id
     if(preId !== prvId){

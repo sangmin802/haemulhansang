@@ -45,15 +45,17 @@
   justify-content : center;
   border-right : 1px solid #bfbfbf;
 }
+.commu1Content .noticeWrap .noticeLabelWrap .noticeLabel:nth-last-child(1) {
+  border : 0;
+}
 .commu1Content .per5 { width : 5%; }
 .commu1Content .per10 { width : 10%; }
 .commu1Content .per70 { width : 70%; }
 .commu1Content .view { border : 0; }
-.commu1Content .noticeWrap .noticeContentWrap {
-  border-bottom : 1px solid #bfbfbf;
-}
+
 .commu1Content .noticeWrap .noticeContentWrap .noticeContent {
   display : flex;
+  border-bottom : 1px solid #bfbfbf;
 }
 .commu1Content .noticeWrap .noticeContentWrap .noticeContent .noticeCont { 
   font-size : 1em;
@@ -67,3 +69,90 @@
   cursor : pointer;
 }
 .commu1Content .noticeWrap .noticeContentWrap .noticeContent .view { border : 0; }
+
+/* noticeInform */
+.noticeInformContent {
+  margin-top : 2.5vw;
+  border-top : 2px solid #056437;
+}
+.noticeInformContent .noticeInformTitle {
+  font-size : 1.25em;
+  padding : 14px 0;
+  color : #333;
+  font-weight : bold;
+  text-align : center;
+  background : #f6f6f6;
+}
+.noticeInformContent .noticeInformSup {
+  padding : 14px;
+  font-size : 0.938em;
+}
+.noticeInformContent .noticeInformSup span {
+  color : #777;
+}
+.noticeInformContent .noticeInformSup > span {
+  border-right : 1px solid #d9d9d9;
+  padding : 0 15px;
+}
+.noticeInformContent .noticeInformSup > span:first-child {
+  padding-left : 0;
+}
+.noticeInformContent .noticeInformSup > span:nth-last-child(1) {
+  border-right : 0;
+}
+.noticeInformContent .noticeInformDesc {
+  padding : 2.5vw 0;
+  font-size : 1em;
+  color : #444444;
+}
+.noticeInformContent .noticeInformDesc .noticeInformImg {
+  margin-bottom : 2vw;
+}
+.noticeInformContent .otherNoticeBtn > div {
+  display : flex;
+  padding : 20px;
+  border-top : 1px solid rgb(231, 231, 231);
+}
+.noticeInformContent .otherNoticeBtn > div:nth-last-child(1) {
+  border-bottom : 1px solid rgb(231, 231, 231);
+}
+.noticeInformContent .otherNoticeBtn > div div, .noticeInformContent .otherNoticeBtn > div a {
+  color : #777777;
+  font-size : 0.938em;
+}
+.noticeInformContent .otherNoticeBtn > div .label {
+  position : relative;
+  padding-right : 40px;
+}
+.noticeInformContent .otherNoticeBtn > div .label::after {
+  content : '';
+  position : absolute;
+  width : 7px;
+  height : 7px;
+  border-right : 2px solid #999;
+  border-bottom : 2px solid #999;
+  right : 0;
+  margin-right : 20px;
+  top : 5px;
+  transform : rotate(45deg);
+}
+.noticeInformContent .otherNoticeBtn > div:first-child .label::after {
+  top : 8px;
+  transform : rotate(-135deg);
+}
+.noticeInformContent .goList {
+  text-align : right;
+  margin-top : 2.5vw;
+}
+.noticeInformContent .goList span {
+  background : #056437;
+  border : 1px solid #056437;
+  padding : 10px 20px;
+  color : white;
+  cursor : pointer;
+  transition : .3s;
+}
+.noticeInformContent .goList span:hover {
+  background : white;
+  color : #056437;
+}

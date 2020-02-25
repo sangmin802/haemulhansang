@@ -74,11 +74,11 @@
 }
 
 /* newsInform */
-.newsImformContent {
+.newsInformContent {
   margin-top : 2.5vw;
   border-top : 2px solid #056437;
 }
-.newsImformContent .newsInformTitle {
+.newsInformContent .newsInformTitle {
   font-size : 1.25em;
   padding : 14px 0;
   color : #333;
@@ -86,48 +86,48 @@
   text-align : center;
   background : #f6f6f6;
 }
-.newsImformContent .newsInformSup {
+.newsInformContent .newsInformSup {
   padding : 14px;
   font-size : 0.938em;
 }
-.newsImformContent .newsInformSup span {
+.newsInformContent .newsInformSup span {
   color : #777;
 }
-.newsImformContent .newsInformSup > span {
+.newsInformContent .newsInformSup > span {
   border-right : 1px solid #d9d9d9;
   padding : 0 15px;
 }
-.newsImformContent .newsInformSup > span:first-child {
+.newsInformContent .newsInformSup > span:first-child {
   padding-left : 0;
 }
-.newsImformContent .newsInformSup > span:nth-last-child(1) {
+.newsInformContent .newsInformSup > span:nth-last-child(1) {
   border-right : 0;
 }
-.newsImformContent .newsInformDesc {
+.newsInformContent .newsInformDesc {
   padding : 2.5vw 0;
   font-size : 1em;
   color : #444444;
 }
-.newsImformContent .newsInformDesc .newsInformImg {
+.newsInformContent .newsInformDesc .newsInformImg {
   margin-bottom : 2vw;
 }
-.newsImformContent .otherNewsBtn > div {
+.newsInformContent .otherNewsBtn > div {
   display : flex;
   padding : 20px;
   border-top : 1px solid rgb(231, 231, 231);
 }
-.newsImformContent .otherNewsBtn > div:nth-last-child(1) {
+.newsInformContent .otherNewsBtn > div:nth-last-child(1) {
   border-bottom : 1px solid rgb(231, 231, 231);
 }
-.newsImformContent .otherNewsBtn > div div, .newsImformContent .otherNewsBtn > div a {
+.newsInformContent .otherNewsBtn > div div, .newsInformContent .otherNewsBtn > div a {
   color : #777777;
   font-size : 0.938em;
 }
-.newsImformContent .otherNewsBtn > div .label {
+.newsInformContent .otherNewsBtn > div .label {
   position : relative;
   padding-right : 40px;
 }
-.newsImformContent .otherNewsBtn > div .label::after {
+.newsInformContent .otherNewsBtn > div .label::after {
   content : '';
   position : absolute;
   width : 7px;
@@ -139,7 +139,23 @@
   top : 5px;
   transform : rotate(45deg);
 }
-.newsImformContent .otherNewsBtn > div:first-child .label::after {
+.newsInformContent .otherNewsBtn > div:first-child .label::after {
   top : 8px;
   transform : rotate(-135deg);
+}
+.newsInformContent .goList {
+  text-align : right;
+  margin-top : 2.5vw;
+}
+.newsInformContent .goList span {
+  background : #056437;
+  border : 1px solid #056437;
+  padding : 10px 20px;
+  color : white;
+  cursor : pointer;
+  transition : .3s;
+}
+.newsInformContent .goList span:hover {
+  background : white;
+  color : #056437;
 }

@@ -101,7 +101,7 @@ class Store3 extends React.Component {
           {interior ? 
             <div className="imgSelect">
               {arr2.map((res, index) => {
-                return <img key={index} src={`/img/store/interior/interior${res}.jpg`} alt={`interior${res}`} />
+                return <img key={index} onClick={() => this.clickSlide(index)} src={`/img/store/interior/interior${res}.jpg`} alt={`interior${res}`} />
               })}               
             </div>
             :
@@ -145,12 +145,12 @@ class Store3 extends React.Component {
   mouseMove = (e) => {
     if(this.touch && !this.slide){
       if(this.touchStart - e.screenX > 300){
+        this.slideNext();
         if(this.count === 6){
           this.count = 0;
         }else{
           this.count = this.count+1;
         }
-        this.slideNext();
         setTimeout(() => {
           this.slide = false;          
         }, 500);
@@ -164,8 +164,8 @@ class Store3 extends React.Component {
         setTimeout(() => {
           this.slide = false;          
         }, 500);
-      }
-    }
+      };
+    };
   };
 
   slideNext = () => {
@@ -174,7 +174,7 @@ class Store3 extends React.Component {
     const slideList = document.querySelectorAll('.slideImg');
     const { width } = this.state;
     Array.from(slideList).map((res, index) => {
-      if(this.count-1 === index){
+      if(this.count === index){
         res.style.left = width*(slideList.length-2)+'px';
       }else{
         const preleft = Number(res.style.left.replace('px', ''));
@@ -234,6 +234,71 @@ class Store3 extends React.Component {
       }
       return null;
     });
+  };
+
+  clickSlide = (selectIndex) => {
+    const { width } = this.state;
+    const slideList = document.querySelectorAll('.slideImg');
+    let gap = null;
+    // selectIndex를 slideindex와 동일하게
+    selectIndex = selectIndex+1;
+    selectIndex = selectIndex%slideList.length;
+    // 이동완료 후, count 는 selectIndex-1 되어야 함
+    if(selectIndex <= this.count){
+      // prev
+      gap = this.count - selectIndex;
+      if(gap !== 0){ // 두칸 이상 차이일때
+        let reduce = gap+1; // 현재 보여지고있는것과 선택한 것 사이의 거리
+        Array.from(slideList).map((res, index) => { // 클릭한것과, 보여지고있는 것 사이의 이미지들을 모두 좌측정렬시켜준다.
+          // if(index !== 0){
+          if(index >= selectIndex && index < this.count){
+            // index가 낮은순으로 map이 돌아가기때문에, reduce는 점차 감소해야함. 가장 먼 -> 가장 가까운
+            res.style.left = -(width*reduce)+'px';
+            reduce = reduce-1;
+          };
+          // };
+        })
+        Array.from(slideList).map((res, index) => {
+          const preleft = Number(res.style.left.replace('px', ''));
+          res.animate([
+            {left : preleft+'px'},
+            {left : preleft+(width*(gap+1))+'px'},
+          ], {
+            duration : 500,
+            easing : 'ease-in-out',
+            iterations : 1,
+            fill : 'forwards'
+          });
+          res.style.left = preleft+(width*(gap+1))+'px';
+          if(selectIndex-1 === index){
+            res.style.left = -width+'px';
+          }else if(selectIndex === index){
+            res.style.left = 0+'px';
+          }else if(selectIndex-1 > index){
+            res.style.left = (index + (slideList.length - selectIndex))*width+'px';
+          }else{
+            res.style.left = (index - selectIndex)*width+'px';
+          }
+          this.count = selectIndex-1;
+          return null;
+        })
+      }else{ // 한칸차이일때
+        if(this.count === 0){
+          this.count = 6;
+        }else{
+          this.count = this.count-1;
+        }
+        this.slidePrev();
+        setTimeout(() => {
+          this.slide = false;          
+        }, 500);
+      }
+    }else if(selectIndex >= this.count){
+      // next
+      gap = selectIndex - this.count;
+    }else{
+      return;
+    };
   };
 };
 

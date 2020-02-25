@@ -1,6 +1,9 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 
 import '../../../css/commu1.css';
+import NoticeWrap from './noticeWrap.js';
+import NoticeInform from './noticeInform.js';
 
 class Commu1 extends React.Component {
   state = {
@@ -22,28 +25,8 @@ class Commu1 extends React.Component {
         <div className="titleImg">
           <img src="/img/commu/commu1/notice_tit.png" alt="공지사항" />
         </div>
-        <div className="noticeWrap">
-          <div className="noticeLabelWrap">
-            <div className="noticeLabel number per5">번호</div>
-            <div className="noticeLabel title per70">제목</div>
-            <div className="noticeLabel author per10">작성자</div>
-            <div className="noticeLabel created per10">게시일</div>
-            <div className="noticeLabel view per5">조회수</div>
-          </div>
-          <div className="noticeContentWrap">
-            {data.map(res => {
-              return(
-                <div className="noticeContent" key={res.id}>
-                  <div className="noticeCont number per5">{res.id}</div>
-                  <div className="noticeCont title per70"><span>{res.title}</span></div>
-                  <div className="noticeCont author per10">{res.author}</div>
-                  <div className="noticeCont created per10">{res.created}</div>
-                  <div className="noticeCont view per5">{res.view}</div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
+        <Route exact path="/community/commu1" render={(props) => (<NoticeWrap {...props} data = {data} />)} />
+        <Route path="/community/commu1/:id" render={(props) => (<NoticeInform {...props} data = {data} />)} />
       </div>
     );
   };
