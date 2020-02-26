@@ -16,7 +16,7 @@ class Store3 extends React.Component {
       clearTimeout(resizeId);
       resizeId = setTimeout(() => {
         window.location.reload();
-      }, 500);
+      }, 100);
     });
   };
   
@@ -240,36 +240,41 @@ class Store3 extends React.Component {
     const { width } = this.state;
     const slideList = document.querySelectorAll('.slideImg');
     let gap = null;
-    // selectIndex를 slideindex와 동일하게
-    selectIndex = selectIndex+1;
-    selectIndex = selectIndex%slideList.length;
+    // selectIndex를 img의 index와 동일하게
+    // selectIndex = selectIndex+1;
+    // selectIndex = selectIndex%slideList.length;
     // 이동완료 후, count 는 selectIndex-1 되어야 함
-    if(selectIndex <= this.count){
+    if(selectIndex < this.count){
       // prev
       gap = this.count - selectIndex;
-      if(gap !== 0){ // 두칸 이상 차이일때
-        let reduce = gap+1; // 현재 보여지고있는것과 선택한 것 사이의 거리
+      if(gap !== 1){
+        let reduce = gap; // 현재 보여지고있는것과 선택한 것 사이의 거리
         Array.from(slideList).map((res, index) => { // 클릭한것과, 보여지고있는 것 사이의 이미지들을 모두 좌측정렬시켜준다.
           // if(index !== 0){
-          if(index >= selectIndex && index < this.count){
+          if(index > selectIndex && index < this.count+1){
             // index가 낮은순으로 map이 돌아가기때문에, reduce는 점차 감소해야함. 가장 먼 -> 가장 가까운
             res.style.left = -(width*reduce)+'px';
             reduce = reduce-1;
           };
           // };
+          return null;
         })
+        // selectIndex를 img의 index와 동일하게
+        // 계산하기 쉽도록 했음. -값이 나올수 없게
+        selectIndex = selectIndex+1;
+        selectIndex = selectIndex%slideList.length;
         Array.from(slideList).map((res, index) => {
           const preleft = Number(res.style.left.replace('px', ''));
           res.animate([
             {left : preleft+'px'},
-            {left : preleft+(width*(gap+1))+'px'},
+            {left : preleft+(width*gap)+'px'},
           ], {
             duration : 500,
             easing : 'ease-in-out',
             iterations : 1,
             fill : 'forwards'
           });
-          res.style.left = preleft+(width*(gap+1))+'px';
+          res.style.left = preleft+(width*gap)+'px';
           if(selectIndex-1 === index){
             res.style.left = -width+'px';
           }else if(selectIndex === index){
@@ -281,7 +286,7 @@ class Store3 extends React.Component {
           }
           this.count = selectIndex-1;
           return null;
-        })
+        });
       }else{ // 한칸차이일때
         if(this.count === 0){
           this.count = 6;
@@ -293,9 +298,55 @@ class Store3 extends React.Component {
           this.slide = false;          
         }, 500);
       }
-    }else if(selectIndex >= this.count){
+    }else if(selectIndex > this.count){
       // next
       gap = selectIndex - this.count;
+      if(gap !== 1){
+        let increase = 0;
+        Array.from(slideList).map((res, index) => {
+          if(this.count === index) {
+            res.style.left = (slideList.length-1)*width+'px';
+          }else if(this.count+1 < index && selectIndex > index){
+            res.style.left = (increase+1)*width+'px';
+            increase = increase + 1;
+          };
+          return null;
+        });
+        selectIndex = selectIndex+1;
+        Array.from(slideList).map((res, index) => {
+          const preleft = Number(res.style.left.replace('px', ''));
+          res.animate([
+            {left : preleft+'px'},
+            {left : preleft-(gap*width)+'px'}
+          ], {
+            duration : 500,
+            easing : 'ease-in-out',
+            iterations : 1,
+            fill : 'forwards'
+          })
+          if(selectIndex%slideList.length === index){
+            res.style.left = 0+'px';
+          }else if(selectIndex-1 === index){
+            res.style.left = -width+'px';
+          }else if(selectIndex-1 > index){
+            res.style.left = (index+(slideList.length-selectIndex))*width+'px';// 이 경우, 선택한것보다 큰것들의 갯수 다음으로 추가가되어야 하기 때문에, length와 select값의 차를 구하고, index들을 더해주면 됨.
+          }else if(selectIndex%slideList.length < index){
+            res.style.left = (index - selectIndex)*width+'px';
+          }
+          this.count = selectIndex-1;
+          return null;
+        });
+      }else{
+        this.slideNext();
+        if(this.count === 6){
+          this.count = 0;
+        }else{
+          this.count = this.count+1;
+        }
+        setTimeout(() => {
+          this.slide = false;          
+        }, 500);
+      }
     }else{
       return;
     };

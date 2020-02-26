@@ -11,7 +11,7 @@ class NoticeInform extends React.Component {
     const { isLoading, notice } = this.state;
     const { data, match : { params : { id } } } = this.props;
     if(isLoading){
-      return <div>Loading...</div>
+      return <div className="loading">Loading...</div>
     }
     const prevNotice = data.find(res => res.id === Number(id)-1);
     const nextNotice = data.find(res => res.id === Number(id)+1);
@@ -35,13 +35,13 @@ class NoticeInform extends React.Component {
           <div className="nextBtn">
             <div className="label">다음글</div>
             <div className="title">
-              {nextNotice ? <Link to={`/community/commu1/${nextNotice.id}`}>{nextNotice.title}</Link> : '다음글이 없습니다.'}
+              {nextNotice ? <Link onClick={() => {window.scrollTo(0,0)}} to={`/community/commu1/${nextNotice.id}`}>{nextNotice.title}</Link> : '다음글이 없습니다.'}
             </div>
           </div>
           <div className="prevBtn">
             <div className="label">이전글</div>
             <div className="title">
-              {prevNotice ? <Link to={`/community/commu1/${prevNotice.id}`}>{prevNotice.title}</Link> : '이전글이 없습니다.'}
+              {prevNotice ? <Link onClick={() => {window.scrollTo(0,0)}} to={`/community/commu1/${prevNotice.id}`}>{prevNotice.title}</Link> : '이전글이 없습니다.'}
             </div>
           </div>
         </div>

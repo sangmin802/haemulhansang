@@ -12,7 +12,7 @@ class NewsInform extends React.Component {
     const { isLoading, news } = this.state;
     if(isLoading){
       return(
-        <div>Loading...</div>
+        <div className="loading">Loading...</div>
       )
     }
 
@@ -42,13 +42,13 @@ class NewsInform extends React.Component {
           <div className="nextBtn">
             <div className="label">다음글</div>
             <div className="title">
-              {nextNews ? <Link to={`/community/commu2/${nextNews.id}`}>{nextNews.title}</Link> : '다음글이 없습니다.'}
+              {nextNews ? <Link onClick={() => {window.scrollTo(0,0)}} to={`/community/commu2/${nextNews.id}`}>{nextNews.title}</Link> : '다음글이 없습니다.'}
             </div>
           </div>
           <div className="prevBtn">
             <div className="label">이전글</div>
             <div className="title">
-              {prevNews ? <Link to={`/community/commu2/${prevNews.id}`}>{prevNews.title}</Link> : '이전글이 없습니다.'}
+              {prevNews ? <Link onClick={() => {window.scrollTo(0,0)}} to={`/community/commu2/${prevNews.id}`}>{prevNews.title}</Link> : '이전글이 없습니다.'}
             </div>
           </div>
         </div>

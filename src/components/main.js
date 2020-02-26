@@ -69,6 +69,7 @@ class Main extends React.Component {
   goPage = (e) => {
     const { goPage, subRouteList, subPageSelect } = this.props;
     const baseSubMenuId = subRouteList.filter(res => res.mainId === Number(e.currentTarget.dataset.index))[0].id;
+    window.scrollTo(0,0);
     if(e.target.dataset.subindex === undefined){
       goPage(e.currentTarget.dataset.index, null);
       subPageSelect(baseSubMenuId);

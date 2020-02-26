@@ -9,7 +9,7 @@ class App extends React.Component {
   render(){
     const { isIndex, selectedPage, goIndex, selectedSubPage, isLoading, routeList, subRouteList } = this.props;
     if(isLoading){
-      return <div>Loading...</div>
+      return <div className="loading">Loading...</div>
     }
     return (
       <div className="App">
@@ -35,7 +35,7 @@ class App extends React.Component {
                 <div className="innerPageRoute">
                   <div className="top">
                     <div className="logo">
-                      <Link to='/' onClick={goIndex}><img src="/img/index/logo.jpg" alt="해물한상" /></Link>
+                      <Link to='/' onClick={() => {goIndex(); window.scrollTo(0,0)}}><img src="/img/index/logo.jpg" alt="해물한상" /></Link>
                     </div>
                     <div className="route">
                       {routeList.map(res => {
@@ -135,6 +135,7 @@ class App extends React.Component {
   goPage = (e) => {
     const { goPage, subRouteList, subPageSelect } = this.props;
     const baseSubMenuId = subRouteList.filter(res => res.mainId === Number(e.target.dataset.index))[0].id;
+    window.scrollTo(0,0);
     if(e.target.dataset.subindex === undefined){
       goPage(e.target.dataset.index, null);
       subPageSelect(baseSubMenuId);
@@ -146,11 +147,11 @@ class App extends React.Component {
   selectedRoute = (e) => {
     const { pageSelect, subPageSelect } = this.props;
     const index = Number(e.target.dataset.index);
-
     pageSelect(index);
     const { subRouteList } = this.props;
     if(e.nativeEvent.type === 'click'){
       const subId = subRouteList.filter(res => res.mainId === index)[0].id;
+      window.scrollTo(0,0);
       subPageSelect(subId);
     }
   };
@@ -164,6 +165,7 @@ class App extends React.Component {
   selectedSubPage = (e) => {
     const { subPageSelect } = this.props;
     const index = e.target.dataset.id;
+    window.scrollTo(0,0);
     subPageSelect(index);
   }
 

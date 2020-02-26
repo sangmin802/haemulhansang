@@ -13,7 +13,7 @@ class Menu extends React.Component {
   render(){
     const { itemLoading, data } = this.state;
     if(!itemLoading){
-      return <div className="itemLoading">상품을 받아오는 중입니다. <br />잠시만 기다려주세요!</div>;
+      return <div  className="itemLoading">상품을 받아오는 중입니다. <br />잠시만 기다려주세요!</div>;
     }
     const { match : { url } } = this.props;
     const { subRouteList } = this.props;

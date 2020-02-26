@@ -13,7 +13,7 @@ class Store2 extends React.Component {
 
     if(isLoading){
       return (
-        <div>Loading</div>
+        <div className="loading">Loading</div>
       );
     };
     gallery.sort((a, b) => {

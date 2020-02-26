@@ -15,7 +15,7 @@ class Commu2 extends React.Component {
     
     if(isLoading){
       return(
-        <div>Loading...</div>
+        <div className="loading">Loading...</div>
       )
     }
     data.sort((a, b) => {

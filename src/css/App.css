@@ -225,3 +225,14 @@
 .displayBlock {
   display : block !important;
 }
+
+.loading {
+  display : flex;
+  align-items : center;
+  justify-content : center;
+}
+.itemLoading {
+  align-items : center;
+  justify-content : center;
+  height : 100vh;
+}

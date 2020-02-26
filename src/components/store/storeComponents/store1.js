@@ -15,7 +15,7 @@ class Store1 extends React.Component {
     const { apiLoad, districtData, storeData, first, second, typeSearch } = this.state;
     if(!apiLoad){
       return (
-        <div>
+        <div className="loading">
           Loading...
         </div>
       );
