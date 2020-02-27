@@ -144,3 +144,60 @@
   font-size : 1.375em;
   background-position : 0 center;
 }
+
+@media screen and (min-width :0px) and (max-width : 1179px) {
+  .mainComponent {
+    display : block;
+    padding-top : 80px;
+  }
+  .mainComponent .mainImg {
+    position : inherit;
+    width : 100%;
+    height : 768px;
+    opacity : 1;
+  }
+  .mainComponent .mainNav {
+    position : inherit;
+    width : 100%;
+    height : auto;
+    opacity : 1;
+  }
+  .mainComponent .mainNav .menu a {
+    display : inline-block;
+    width : 100%;
+  }
+  .mainComponent .mainNav .menu2 .menu2Content {
+    width : 100%;
+    display : flex;
+    justify-content : space-between;
+  }
+  .mainComponent .mainNav .menu2 .menu2Content .menu2Img {
+    width : 50%;
+  }
+  .mainComponent .mainNav .menu2 .menu2Content .menu2Inform {
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+  }
+  .mainComponent .mainNav .menu3 .menu3Content {
+    width : 100%;
+    padding : 0;
+    display : flex;
+    position : relative;
+    justify-content : space-between;
+    background-position : right;
+  }
+  .mainComponent .mainNav .menu3 .menu3Content .menu3Inform {
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+  }
+  .mainComponent .mainNav .menu3 .menu3Content .arrow {
+    position : absolute;
+    left : 0;
+    bottom : 0;
+  }
+  .ingAni, .navAni {
+    animation : none;
+  }
+}

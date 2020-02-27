@@ -5,6 +5,7 @@ export default createStore((state, action) => {
     if(JSON.parse(sessionStorage.getItem('state')) === null){
       const state = {
         isIndex : true,
+        isMobile : false,
         isLoading : true,
         selectedPage : null,
         routeList : [],
@@ -36,6 +37,10 @@ export default createStore((state, action) => {
       newState.selectedPage = Number(action.pageIndex);
     }else if(action.type === 'subPageSelect'){
       newState.selectedSubPage = Number(action.subPageIndex);
+    }else if(action.type === 'mobile'){
+      newState.isMobile = true;
+    }else if(action.type === 'pc'){
+      newState.isMobile = false;
     }
     sessionStorage.setItem('state', JSON.stringify(newState));
     return newState;

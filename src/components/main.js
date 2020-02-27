@@ -26,11 +26,13 @@ class Main extends React.Component {
             <Link to='/about/comp' data-index = '1' data-subindex = '3' onClick={this.goPage}>              
               <div className="menu2Content menuContent">
                 <div className="menu2Img"></div>
-                <div className="title">BRAND COMPETITIVE</div>
-                <div className="text">
-                  해산물 전문 프랜차이즈, 맛의 유지,<br />
-                  두터운 고객 타깃충, 낮에도 밤에도 즐길 수 있는<br />
-                  해물한상의 브랜드 경쟁력을 소개합니다.<br />
+                <div className="menu2Inform">
+                  <div className="title">BRAND COMPETITIVE</div>
+                  <div className="text">
+                    해산물 전문 프랜차이즈, 맛의 유지,<br />
+                    두터운 고객 타깃충, 낮에도 밤에도 즐길 수 있는<br />
+                    해물한상의 브랜드 경쟁력을 소개합니다.<br />
+                  </div>
                 </div>
               </div>
             </Link>
@@ -38,13 +40,15 @@ class Main extends React.Component {
           <div className="menu menu3">
             <Link to='/menu/menu1' data-index = '4' onClick={this.goPage}>
               <div className="menu3Content menuContent">
-                <div className="img">
-                  <img src="/img/index/main_con_logo3.png" alt="해물한상 STORE" />
-                </div>
-                <div className="title">STORE</div>
-                <div className="text">
-                  해물한상의 전국지점들을<br />
-                  만나보세요!<br />
+                <div className="menu3Inform">
+                  <div className="img">
+                    <img src="/img/index/main_con_logo3.png" alt="해물한상 STORE" />
+                  </div>
+                  <div className="title">STORE</div>
+                  <div className="text">
+                    해물한상의 전국지점들을<br />
+                    만나보세요!<br />
+                  </div>
                 </div>
                 <div className="arrow"></div>
               </div>

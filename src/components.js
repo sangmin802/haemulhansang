@@ -13,6 +13,7 @@ export default {
   App : connect((state) => {
     return {
       isIndex : state.isIndex,
+      isMobile : state.isMobile,
       isLoading : state.isLoading,
       selectedPage : state.selectedPage,
       selectedSubPage : state.selectedSubPage,
@@ -21,6 +22,12 @@ export default {
     };
   }, (dispatch) => {
     return {
+      mobile : () => {
+        dispatch({type : 'mobile'})
+      },
+      pc : () => {
+        dispatch({type : 'pc'})
+      },
       loaded : (data) => {
         dispatch({type : 'loaded', data : data, isLoading : false});
       },
