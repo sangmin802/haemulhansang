@@ -56,3 +56,12 @@
   margin-top : 10px;
   letter-spacing : -1px;
 }
+
+@media screen and (min-width : 0px) and (max-width : 767px) {
+  .about .mainBg {
+    margin-top : 50px;
+    background : url('/img/about/sub_mvisual.jpg') no-repeat;
+    background-size : cover;
+    background-position : center center;
+  }
+}

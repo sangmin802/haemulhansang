@@ -20,7 +20,7 @@ class NoticeWrap extends React.Component {
                 <div className="noticeContent" key={res.id}>
                   <div className="noticeCont number per5">{res.id}</div>
                   <div className="noticeCont title per70">
-                    <Link to={`/community/commu1/${res.id}`}>
+                    <Link to={`/community/commu1/${res.id}`} onClick={() => {window.scrollTo(0,0)}}>
                       <span>{res.title}</span>
                     </Link>
                   </div>

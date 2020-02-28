@@ -104,7 +104,7 @@
   border-right : 0;
 }
 .newsInformContent .newsInformDesc {
-  padding : 2.5vw 0;
+  padding : 2.5vw;
   font-size : 1em;
   color : #444444;
 }
@@ -158,4 +158,72 @@
 .newsInformContent .goList span:hover {
   background : white;
   color : #056437;
+}
+
+@media screen and (min-width : 0px) and (max-width : 1180px) {
+  .commu2Content {
+    padding : 0 2%;
+  }
+  .commu2Content .newsWrap .newsCont {
+    width : calc((98% / 3) - 0.01px);
+    margin-right : 1%;
+    margin-bottom : 3%;
+    cursor : pointer;
+  }
+  .commu2Content .newsWrap .newsCont:nth-child(4n){
+    margin-right : 1%;
+  }
+  .commu2Content .newsWrap .newsCont:nth-child(3n){
+    margin-right : 0;
+  }
+}
+@media screen and (min-width : 0px) and (max-width : 767px) {
+  .commu2Content {
+    padding : 0 2%;
+  }
+  .commu2Content .newsWrap .newsCont {
+    width : calc((99% / 2) - 0.01px);
+    margin-right : 0;
+    margin-bottom : 3%;
+    cursor : pointer;
+  }
+  .commu2Content .newsWrap .newsCont:nth-child(2n-1){
+    margin-right : 1%;
+  }
+  .commu2Content .newsWrap .newsCont:nth-child(4n){
+    margin-right : 0;
+  }
+  .commu2Content .newsWrap .newsCont .newsInfo {
+    padding : 4vw;
+  }
+  .newsInformContent .newsInformTitle {
+    font-size : 4vw;
+  }
+  .newsInformContent .newsInformSup {
+    font-size : 3vw;
+  }
+  .newsInformContent .newsInformDesc .newsInformImg img {
+    display : block;
+    width : 100%;
+  }
+  .newsInformContent .newsInformDesc {
+    font-size : 3.7vw;
+  }
+  .newsInformContent .otherNewsBtn > div div, .newsInformContent .otherNewsBtn > div a {
+    font-size : 3vw;
+  }
+  .newsInformContent .otherNewsBtn > div {
+    padding : 2vw;
+  }
+  .newsInformContent .otherNewsBtn > div .label {
+    padding-right : 2vw;
+  }
+  .newsInformContent .otherNewsBtn > div .label::after {
+    width : 0;
+    height : 0;
+  }
+  .newsInformContent .goList span {
+    padding : 1vw 2vw;
+    font-size : 4vw;
+  }
 }

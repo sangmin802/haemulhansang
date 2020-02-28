@@ -80,6 +80,9 @@
   justify-content : center;
   margin-right : 25px;
 }
+.store3Content .section3 .btnWrap .btn:nth-child(2) {
+  margin-right : 0;
+}
 .selectedBtn {
   background : url('/img/store/interior/interior_tab_on.png') no-repeat !important;
   background-size : 100% 100% !important;
@@ -95,6 +98,7 @@
 }
 .imgSelect {
   width : 100%;
+  height : auto;
   position : relative;
   display : flex;
   flex-wrap : wrap;
@@ -104,7 +108,98 @@
   display : block;
   width : calc((94%) / 7 - 0.01px);
   margin-right : 1%;
+  min-height : 25px;
 }
 .imgSelect img:nth-last-child(1) {
   margin-right : 0;
+}
+
+@media screen and (min-width : 768px) and (max-width : 1180px) {
+  .store3Content .section1 {
+    flex-direction : column;
+    align-items : center;
+  }
+  .store3Content .section1 .img {
+    width : 100%;
+    text-align : center;
+  }
+  .store3Content .section1 .desc {
+    width : 540px;
+    margin-top : 6vw;
+  }
+  .store3Content .section2 .section2ContWrap .desc {
+    width : 80%;
+    letter-spacing : -1px;
+    margin : 0 auto;
+  }
+  .imgSelect img {
+    height : 50px;
+  }
+}
+@media screen and (min-width : 0px) and (max-width : 767px) {
+  .store3Content .section1 {
+    flex-direction : column;
+    align-items : center;
+    padding : 0 4vw;
+  }
+  .store3Content .section1 .img {
+    width : 100%;
+    text-align : center;
+  }
+  .store3Content .section1 .img img {
+    display : block;
+    width : 100%;
+  }
+  .store3Content .section1 .desc .title {
+    text-align : center;
+  }
+  .store3Content .section1 .desc .title::before {
+    left : 50%;
+    margin-left : -100px;
+  }
+  .store3Content .section1 .desc .title::after {
+    left : 50%;
+    margin-left : -60px;
+  }
+  .store3Content .section1 .desc {
+    width : 100%;
+    margin-top : 10vw;
+  }
+  .store3Content .section1 .desc .info .label {
+    font-size : 5vw;
+    text-align : center;
+  }
+  .store3Content .section1 .desc .info .text {
+    font-size : 4vw;
+    text-align : center;
+  }
+  .store3Content .section2 .section2ContWrap .title {
+    width : 80%;
+    margin : 0 auto;
+    margin-bottom : 6vw;
+  }
+  .store3Content .section2 .section2ContWrap .title img {
+    display : block;
+    width : 100%;
+  }
+  .store3Content .section2 .section2ContWrap .desc {
+    width : 80%;
+    letter-spacing : -1px;
+    margin : 0 auto;
+  }
+  .store3Content .section3 .btnWrap {
+    width : 80%;
+    margin : 0 auto;
+    margin-bottom : 6vw;
+  }
+  .store3Content .section3 .btnWrap .btn {
+    width : 100%;
+  }
+  .store3Content .section3 .btnWrap .btn img {
+    display : block;
+    width : 70%;
+  }
+  .imgSelect img {
+    height : 25px;
+  }
 }

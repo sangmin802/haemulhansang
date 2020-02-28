@@ -121,3 +121,26 @@
   border : none;
   cursor : pointer;
 }
+
+@media screen and (min-width : 0px) and (max-width : 1180px) {
+  .fran3Form {
+    width : 75%;
+  } 
+}
+@media screen and (min-width : 0px) and (max-width : 767px) {
+  .fran3Form {
+    width : 90%;
+  } 
+  .fran3Form > div .label {
+    font-size : 3.5vw;
+  }
+  .fran3Form > div .type input, .fran3Form > div .type textarea {
+    font-size : 3vw;
+  }
+  .fran3Form .checkbox .short, .fran3Form .checkbox .showLong {
+    font-size : 2vw;
+  }
+  .fran3Form .checkbox {
+    margin-left : 15%;
+  }
+}

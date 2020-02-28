@@ -56,3 +56,10 @@
   margin-top : 10px;
   letter-spacing : -1px;
 }
+
+@media screen and (min-width : 0px) and (max-width : 767px) {
+  .fran .mainBg {
+    margin-top : 50px;
+    background : url('/img/fran/sub_mvisual3.jpg') no-repeat;
+  }
+}

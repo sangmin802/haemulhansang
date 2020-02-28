@@ -56,3 +56,9 @@
   margin-top : 10px;
   letter-spacing : -1px;
 }
+
+@media screen and (min-width : 0px) and (max-width : 767px) {
+  .store .mainBg {
+    margin-top : 50px;
+  }
+}

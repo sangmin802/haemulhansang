@@ -35,9 +35,9 @@ class Fran1 extends React.Component {
           })}
         </div>
         <ul className="subInfo">
-          <li>* 예상비용으로 실제 개설비용이 현장상황에 따라 다를 수 있습니다.</li>
-          <li>* 전기 30KW/가스 16등급</li>
-          <li>* 별도 : 철거, 폴딩도어, 외부익스테리어, 간판추가, 외부덕트, 전기증설, 가스설비, 냉난방 등</li>
+          <li>예상비용으로 실제 개설비용이 현장상황에 따라 다를 수 있습니다.</li>
+          <li>전기 30KW/가스 16등급</li>
+          <li>별도 : 철거, 폴딩도어, 외부익스테리어, 간판추가, 외부덕트, 전기증설, 가스설비, 냉난방 등</li>
         </ul>
         <div className="titleImg">
           <div className="title">Opening Process</div>

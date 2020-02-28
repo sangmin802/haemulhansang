@@ -13,10 +13,10 @@ class Store3 extends React.Component {
     };
     let resizeId;
     window.addEventListener('resize', () => {
-      clearTimeout(resizeId);
-      resizeId = setTimeout(() => {
-        window.location.reload();
-      }, 100);
+      // clearTimeout(resizeId);
+      // resizeId = setTimeout(() => {
+      //   window.location.reload();
+      // }, 100);
     });
   };
   
@@ -86,13 +86,15 @@ class Store3 extends React.Component {
               {arr.map((res, index) => {
                 return <img key={index} src={`/img/store/interior/interior${res}.jpg`} width="100%" alt={`interior${res}`} className="slideImg" onMouseDown={this.mouseDown} onMouseMove={this.mouseMove} onMouseUp={() => {
                   this.touch = false;
-                }} />
+                }} onTouchStart={this.mouseDown} onTouchMove={this.mouseMove} onTouchEnd={() => {
+                  this.touch = false;
+                }}/>
               })}
             </div>
             :
             <div className="imgSlide">
               {arr.map((res, index) => {
-                return <img key={index} src={`/img/store/interior/exterior${res}.jpg`} alt={`exterior${res}`} className="slideImg" onMouseDown={this.mouseDown} onMouseMove={this.mouseMove} onMouseUp={() => {
+                return <img key={index} src={`/img/store/interior/exterior${res}.jpg`} width="100%" alt={`exterior${res}`} className="slideImg" onMouseDown={this.mouseDown} onMouseMove={this.mouseMove} onMouseUp={() => {
                   this.touch = false;
                 }} />
               })}                  
@@ -101,13 +103,13 @@ class Store3 extends React.Component {
           {interior ? 
             <div className="imgSelect">
               {arr2.map((res, index) => {
-                return <img key={index} onClick={() => this.clickSlide(index)} src={`/img/store/interior/interior${res}.jpg`} alt={`interior${res}`} />
+                return <img key={index} onMouseUp={() => this.clickSlide(index)} src={`/img/store/interior/interior${res}.jpg`} alt={`interior${res}`} />
               })}               
             </div>
             :
             <div className="imgSelect">
               {arr2.map((res, index) => {
-                return <img key={index} src={`/img/store/interior/exterior${res}.jpg`} alt={`exterior${res}`} />
+                return <img key={index} onMouseUp={() => this.clickSlide(index)} src={`/img/store/interior/exterior${res}.jpg`} alt={`exterior${res}`} />
               })}                  
             </div>
           }
@@ -136,15 +138,27 @@ class Store3 extends React.Component {
   };
 
   mouseDown = (e) => {
+    let screenX = null;
+    if(e.type === 'touchstart'){
+      screenX = e.touches[0].screenX;
+    }else if(e.type === 'mousedown'){
+      screenX = e.screenX;
+    }
     if(!this.touch){
       this.touch = true;
-      this.touchStart = e.screenX;
+      this.touchStart = screenX;
     }
   };
   
   mouseMove = (e) => {
+    let screenX = null;
+    if(e.type === 'touchmove'){
+      screenX = e.touches[0].screenX;
+    }else if(e.type === 'mousemove'){
+      screenX = e.screenX;
+    }
     if(this.touch && !this.slide){
-      if(this.touchStart - e.screenX > 300){
+      if(this.touchStart - screenX > 150){
         this.slideNext();
         if(this.count === 6){
           this.count = 0;
@@ -154,7 +168,7 @@ class Store3 extends React.Component {
         setTimeout(() => {
           this.slide = false;          
         }, 500);
-      }else if(this.touchStart - e.screenX < -300){
+      }else if(this.touchStart - screenX < -150){
         if(this.count === 0){
           this.count = 6;
         }else{

@@ -171,3 +171,131 @@
 .displayblock {
   display : block !important;
 }
+
+@media screen and (min-width : 0px) and (max-width : 1180px) {
+  .stores {
+    padding : 2%;
+    margin-left : 2%;
+    margin-right : 2%;
+  }
+  .stores .store {
+    flex-direction : column;
+    min-height : 420px;
+  }
+  .stores .store:nth-child(2n) {
+    margin-right : 0;
+  }
+  .stores .store .img {
+    width : 100%;
+    height : 200px;
+  }
+  .stores .store .img img {
+    display : block;
+    width : 100%;
+    height : 100%;
+  }
+  .stores .store .desc {
+    width : 100%;
+    margin : 0;
+  }
+  .stores .store .desc .title {
+    font-size : 1.935em;
+    font-weight : bold;
+    padding : 2vh 0;
+    margin : 0 auto;
+    text-align : center;
+  }
+  .stores .store .dataWrap {
+    display : flex;
+    padding : 0.5vh 0;
+  }
+  .stores .store .dataWrap .data {
+    width : 70%;
+    color : #575757;
+    letter-spacing : -1.5px;
+    font-size : 0.9em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+@media screen and (min-width : 0px) and (max-width : 767px) {
+  .store1Content .searchTitle {
+    width : 70%;
+    margin : 0 auto;
+    margin-bottom : 6vw;
+    padding-left : 20px;
+  }
+  .store1Content .searchTitle img {
+    display : block;
+    width : 100%;
+  }
+  .store1Content .searchTitle > div {
+    width : 100%;
+    font-size : 3.5vw;
+  }
+  .store1Content .searchTitle::before {
+    margin-left : -58%;
+    top : 6px;
+  }
+  .store1Content .searchWrap {
+    width : 70%;
+  }
+  .searchWrap .searchSelect .first, .searchWrap .searchSelect .second, .searchWrap .searchTyping .typing, .searchWrap .searchTyping .button {
+    font-size : 3.5vw;
+  }
+  .stores {
+    padding : 2%;
+    margin-left : 2%;
+    margin-right : 2%;
+  }
+  .stores .store {
+    flex-direction : column;
+    height : auto;
+    width : 100%;
+    margin-right : 0;
+  }
+  .stores .store:nth-child(2n) {
+    margin-right : 0;
+  }
+  .stores .store .img {
+    width : 100%;
+    height : 200px;
+  }
+  .stores .store .img img {
+    display : block;
+    width : 100%;
+    height : 100%;
+  }
+  .stores .store .desc {
+    width : 100%;
+    margin : 0;
+  }
+  .stores .store .desc .title {
+    font-size : 6vw;
+    font-weight : bold;
+    padding : 2vh 0;
+    margin : 0 auto;
+    text-align : center;
+  }
+  .stores .store .dataWrap {
+    display : flex;
+    padding : 0.5vh 0;
+  }
+  .stores .store .dataWrap .label {
+    width : 30%;
+    color : #316530;
+    letter-spacing : -1px;
+    font-weight : bold;
+    font-size : 4vw;
+    text-align : center;
+  }
+  .stores .store .dataWrap .data {
+    width : 70%;
+    color : #575757;
+    font-size : 4vw;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}

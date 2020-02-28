@@ -41,3 +41,29 @@
 .operContent .headMaster img {
   margin-left : 1vw;
 }
+
+@media screen and (min-width : 0px) and (max-width : 767px) {
+  .operContent {
+    padding : 0 4vw;
+  }
+  .operContent .title .titleText {
+    width : 100%;
+  }
+  .operContent .title::after {
+    background : none;
+  }
+  .operContent .title .titleText img {
+    display : block;
+    width : 100%;
+  }
+  .operContent .detailContent {
+    font-size : 3.5vw;
+  }
+  .operContent .headMaster {
+    display : flex;
+    align-items: center;
+    justify-content : center;
+    font-size : 3.5vw;
+    margin-top : 16vw;
+  }
+}

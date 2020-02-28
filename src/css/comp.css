@@ -69,3 +69,32 @@
   align-items : center;
   margin : 80px 0;
 }
+
+@media screen and (min-width : 768px) and (max-width : 1180px) {
+  .introContent .section1, .introContent .section3, .introContent .section5 {
+    padding : 0 4vw;
+  }
+}
+@media screen and (min-width : 0px) and (max-width : 767px) {
+  .compContent .section {
+    flex-direction : column;
+  }
+  .compContent .section .img, .compContent .section .text {
+    width : 100%;
+    margin : 0;
+  }
+  .compContent .section .text {
+    margin-top : 8vw;
+  }
+  .compContent .section .title {
+    font-size : 7vw;
+    text-align : center;
+  }
+  .compContent .section .desc {
+    font-size : 4vw;
+    text-align : center;
+  }
+  .compContent .sectionType2  {
+    flex-direction : column-reverse;
+  }
+}

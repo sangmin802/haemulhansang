@@ -40,7 +40,22 @@ class App extends React.Component {
       menubar = 
         <div className="mobileMenu">
           <div className="logo">
-            <Link to='/' onClick={() => {goIndex(); window.scrollTo(0,0)}}><img src="/img/index/logo.jpg" alt="해물한상" /></Link>
+            <Link to='/' onClick={() => {
+              goIndex(); 
+              window.scrollTo(0,0);
+              const line = document.querySelectorAll('.line');
+              const mobileMenu = document.querySelector('.mobileMenuWrap');
+              const root = document.querySelector('#root');
+              this.hanAniCount = false;
+              Array.from(line).map((res, index) => {
+                res.classList.remove(`line${index}Move`);
+                return null;
+              });
+              mobileMenu.classList.remove('mdisplayblock');
+              root.style.cssText = '';
+            }}>
+              <img src="/img/index/logo.jpg" alt="해물한상" />
+            </Link>
           </div>
           <div className ="hamburger" onClick={this.hamAni}>
             <div className="line line0"></div>
@@ -262,7 +277,7 @@ class App extends React.Component {
     if(isIndex && indexRoute !== null){
       setTimeout(() => {
         indexRoute.classList.add('indexRouteAni');
-      }, 2000)
+      }, 2000);
     };
   }
 

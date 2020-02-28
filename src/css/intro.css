@@ -1,13 +1,16 @@
 .introContent .section1 {
   max-width : 1024px;
-  margin : 0 auto 18vh;
+  margin : 0 auto 10vw;
   display : flex;
   flex-wrap : wrap;
   justify-content : space-between;
   align-items : center;
 }
 .introContent .section1 .img {
-  margin-right : 6vw;
+  width : 25%;
+}
+.introContent .section1 .text {
+  width : 75%;
 }
 .introContent .text .halfTitle {
   font-size : 2.25em;
@@ -19,8 +22,9 @@
   color : #444;
   font-size : 1.125em;
   letter-spacing : -1px;
-  line-height : 2.2vh;
+  line-height : 2.2vw;
   word-break : keep-all;
+  white-space : pre-line;
   font-weight : 500;
 }
 .introContent .text .fullTitle {
@@ -34,7 +38,7 @@
   color : white;
   font-size : 1.125em;
   letter-spacing : -1px;
-  line-height : 2.2vh;
+  line-height : 2.2vw;
   word-break : keep-all;
   font-weight : 500;
 }
@@ -46,7 +50,7 @@
   background : url('/img/about/intro/Binfo_bg.jpg') no-repeat;
   background-size : cover;
   background-position : center;
-  margin-bottom : 18vh;
+  margin-bottom : 10vw;
 }
 .introContent .section2 .text {
   max-width : 1024px;
@@ -57,7 +61,7 @@
   align-items: flex-end;
 }
 .introContent .section2 .text div {
-  width : 675px;
+  width : 80%;
 }
 .introContent .section2 .text .text2 {
   text-align : center;
@@ -65,12 +69,17 @@
 
 .introContent .section3 {
   max-width : 1024px;
-  margin : 0 auto 18vh;
+  margin : 0 auto 10vw;
   display : flex;
 }
 .introContent .section3 .img {
   max-width : 620px;
   min-width : 280px;
+  overflow : hidden;
+}
+.introContent .section3 .img img {
+  display : block;
+  height : 100%;
 }
 
 .introContent .section4 {
@@ -80,7 +89,7 @@
   background : url('/img/about/intro/Binfo_bg2.jpg') no-repeat;
   background-size : cover;
   background-position : center;
-  margin-bottom : 18vh;
+  margin-bottom : 10vw;
 }
 .introContent .section4 .text {
   max-width : 1024px;
@@ -88,18 +97,20 @@
   display : flex;
   flex-direction : column;
   justify-content: center;
-  align-items: flex-end;
 }
 .introContent .section4 .text div {
-  width : 675px;
+  width : 70%;
+  margin : 0 auto;
+  text-align : center;
 }
 .introContent .section4 .text .text2 {
+  margin-top : 30px;
   text-align : center;
 }
 
 .introContent .section5 {
   max-width : 1024px;
-  margin : 0 auto 18vh;
+  margin : 0 auto 10vw;
   display : flex;
   align-items : center;
 }
@@ -115,11 +126,74 @@
   align-items : center;
 }
 .section6 .img {
-  margin-bottom : 8vh;
+  margin-bottom : 8vw;
 }
 .section6 .text .text1 {
-  margin-bottom : 4vh;
+  margin-bottom : 4vw;
 }
 .section6 .text .text2 {
   text-align : center;
+}
+
+@media screen and (min-width : 768px) and (max-width : 1180px) {
+  .introContent .section1, .introContent .section3, .introContent .section5 {
+    padding : 0 2vw;
+  }
+}
+@media screen and (min-width : 0px) and (max-width : 767px) {
+  .introContent .section1, .introContent .section3, .introContent .section5 {
+    padding : 0 4vw;
+  }
+  .introContent .text .halfTitle {
+    font-size : 9vw;
+    text-align : center;
+    margin-top : 4vw;
+  }
+  .introContent .text .halfText {
+    font-size : 4.4vw;
+    line-height : 5.4vw;
+    text-align : center;
+  }
+  .introContent .text .fullTitle {
+    font-size : 8vw;
+    text-align : center;
+    margin : 4vw auto;
+  }
+  .introContent .text .fullText {
+    font-size : 4.4vw;
+    line-height : 5.4vw;
+    text-align : center;
+    margin : 0 auto;
+  }
+  .introContent .section1 {
+    flex-direction : column;
+  }
+  .introContent .section1 .img {
+    width : 100%;
+    text-align : center;
+  }
+  .introContent .section1 .text {
+    width : 90%;
+  }
+  .introContent .section2 {
+    padding : 12vw 0 8vw;
+  }
+  .introContent .section3 {
+    flex-direction : column-reverse;
+  }
+  .introContent .section5 {
+    flex-direction : column;
+  }
+  .introContent .section5 img {
+    margin-right : 0;
+  }
+  .section6 .img {
+    width : 100%;
+    padding : 0 4vw;
+    margin-top : 12vw;
+  }
+  .section6 .img img {
+    display : block;
+    width : 100%;
+  }
 }

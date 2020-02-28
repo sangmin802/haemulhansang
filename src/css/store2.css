@@ -48,3 +48,46 @@
 .store2Content .galleryWrap .gallery:nth-child(4n) {
   margin-right : 0;
 }
+
+@media screen and (min-width : 768px) and (max-width : 1180px) {
+  .store2Content {
+    padding : 0 2%;
+  }
+  .store2Content .galleryWrap .gallery {
+    width : 49%;
+    margin-bottom : 2%;
+  }
+  .store2Content .galleryWrap .gallery:nth-child(2n) {
+    margin-right : 0;
+  }
+  .store2Content .galleryWrap {
+    padding-bottom : 0;
+  }
+}
+@media screen and (min-width : 0px) and (max-width : 767px) {
+  .store2Content {
+    padding : 0 2%;
+  }
+  .store2Content .title {
+    text-align : center;
+  }
+  .store2Content .title::after {
+    left : 50%;
+    margin-left : -40px;
+  }
+  .store2Content .title::before {
+    left : 50%;
+    margin-left : -80px;
+  }
+  .store2Content .galleryWrap .gallery {
+    width : 100%;
+    margin-right : 0;
+    margin-bottom : 2%;
+  }
+  .store2Content .galleryWrap .gallery:nth-child(2n) {
+    margin-right : 0;
+  }
+  .store2Content .galleryWrap {
+    padding-bottom : 0;
+  }
+}

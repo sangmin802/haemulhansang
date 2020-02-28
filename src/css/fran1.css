@@ -71,6 +71,8 @@
 .fran1Content .subInfo li {
   font-size : 0.875em;
   color : #666;
+  list-style : circle;
+  margin-left : 4vw;
 }
 .fran1Content .openProInfo {
   display : flex;
@@ -113,4 +115,60 @@
   letter-spacing : -1px;
   color : #666;
   word-break : break-all;
+}
+
+@media screen and (min-width : 768px) and (max-width : 1180px) {
+  .fran1Content {
+    padding : 0 4vw;
+  }
+  .fran1Content .openProInfo {
+    display : flex;
+    flex-wrap : wrap;
+    justify-content : inherit;
+  }
+  .fran1Content .openProInfo .openProStep {
+    width : calc((98% / 3) - 0.01px);
+    min-height : 192px;
+    padding : 59px 20px 30px;
+    background : url('/img/fran/fran1/info_bg.png') no-repeat;
+    background-size : 100% 100%;
+    margin-right : 1%;
+    margin-bottom : 3%;
+  }
+  .fran1Content .openProInfo .openProStep:nth-child(4n) {
+    margin-right : 1%;
+  }
+  .fran1Content .openProInfo .openProStep:nth-child(3n) {
+    margin-right : 0;
+  }
+}
+@media screen and (min-width : 0px) and (max-width : 767px) {
+  .fran1Content {
+    padding : 0 4vw;
+  }
+  .fran1Content .openCostInfo .title {
+    font-size : 4.5vw;
+  }
+  .fran1Content .openCostInfo .info {
+    font-size : 3.5vw;
+    text-align : center;
+    letter-spacing : -1px;
+  }
+  .fran1Content .subInfo li {
+    font-size : 3.2vw;
+    letter-spacing : -1px;
+  }
+  .fran1Content .openProInfo {
+    display : flex;
+    flex-wrap : wrap;
+    justify-content : inherit;
+  }
+  .fran1Content .openProInfo .openProStep {
+    width : 100%;
+    min-height : 192px;
+    padding : 59px 20px 30px;
+    background : url('/img/fran/fran1/info_bg.png') no-repeat;
+    background-size : 100% 100%;
+    margin-bottom : 3%;
+  }
 }

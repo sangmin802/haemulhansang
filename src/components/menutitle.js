@@ -60,26 +60,6 @@ class MenuTitle extends React.Component {
   subLogoAnimation = () => {
     document.querySelector('.aniImg').classList.add('subLogoAni');
   }
-
-
-  // componentDidMount = () => {
-  //   this.subLogoAnimation();
-  // };
-
-  // componentDidUpdate(prevProps){
-  //   const { location : { pathname } } = prevProps;
-  //   const { match : { params : { value } } } = this.props;
-  //   if(pathname.indexOf(value) === -1){
-  //     document.querySelector('.aniImg').classList.remove('subLogoAni');
-  //     setTimeout(() => {
-  //       this.subLogoAnimation();
-  //     }, 10)
-  //   }
-  // }
-
-  // subLogoAnimation = () => {
-  //   document.querySelector('.aniImg').classList.add('subLogoAni');
-  // }
 };
 
 export default MenuTitle;

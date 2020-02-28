@@ -40,7 +40,7 @@
   font-size : 1.125em;
   font-weight : bold;
   color : #265325;
-  padding : 14px 0;
+  padding : 2vw;
   display : flex;
   justify-content : center;
   border-right : 1px solid #bfbfbf;
@@ -59,7 +59,7 @@
 }
 .commu1Content .noticeWrap .noticeContentWrap .noticeContent .noticeCont { 
   font-size : 1em;
-  padding : 14px;
+  padding : 2vw;
   border-right : 1px solid #bfbfbf; 
   text-align : center;
 }
@@ -77,14 +77,14 @@
 }
 .noticeInformContent .noticeInformTitle {
   font-size : 1.25em;
-  padding : 14px 0;
+  padding : 2vw;
   color : #333;
   font-weight : bold;
   text-align : center;
   background : #f6f6f6;
 }
 .noticeInformContent .noticeInformSup {
-  padding : 14px;
+  padding : 2vw;
   font-size : 0.938em;
 }
 .noticeInformContent .noticeInformSup span {
@@ -101,7 +101,7 @@
   border-right : 0;
 }
 .noticeInformContent .noticeInformDesc {
-  padding : 2.5vw 0;
+  padding : 2.5vw;
   font-size : 1em;
   color : #444444;
 }
@@ -155,4 +155,63 @@
 .noticeInformContent .goList span:hover {
   background : white;
   color : #056437;
+}
+
+@media screen and (min-width : 768px) and (max-width : 1180px) {
+  .commu1Content {
+    margin : 0 2%;
+  }
+  .commu1Content .per5 { width : 15%; }
+  .commu1Content .per10 { width : 15%; }
+  .commu1Content .per70 { width : 55%; }
+}
+@media screen and (min-width : 0px) and (max-width : 767px) {
+  .commu1Content {
+    margin : 0 2%;
+  }
+  .commu1Content .per5 { width : 20%; }
+  .commu1Content .per10 { width : 30%; }
+  .commu1Content .per70 { width : 50%; }
+  .commu1Content .noticeWrap .noticeLabelWrap .noticeLabel {
+    font-size : 3.5vw;
+  }
+  .commu1Content .noticeWrap .noticeLabelWrap .author, .commu1Content .noticeWrap .noticeLabelWrap .view {
+    display : none;
+  }
+  .commu1Content .noticeWrap .noticeContentWrap .noticeContent .noticeCont {
+    font-size : 3vw;
+  }
+  .commu1Content .noticeWrap .noticeContentWrap .author, .commu1Content .noticeWrap .noticeContentWrap .view {
+    display : none;
+  }
+  .commu1Content .noticeWrap .noticeLabelWrap .created, .commu1Content .noticeWrap .noticeContentWrap .noticeContent .created {
+    border-right : 0;
+  }
+  .noticeInformContent .otherNoticeBtn > div {
+    padding : 2vw;
+  }
+  .noticeInformContent .noticeInformDesc {
+    min-height : 100px;
+    font-size : 3.7vw;
+  }
+  .noticeInformContent .goList span {
+    padding : 1vw 2vw;
+    font-size : 4vw;
+  }
+  .noticeInformContent .noticeInformTitle {
+    font-size : 4vw;
+  }
+  .noticeInformContent .noticeInformSup {
+    font-size : 3vw;
+  }
+  .noticeInformContent .otherNoticeBtn > div div, .noticeInformContent .otherNoticeBtn > div a {
+    font-size : 3vw;
+  }
+  .noticeInformContent .otherNoticeBtn > div .label::after {
+    width : 0;
+    height : 0;
+  }
+  .noticeInformContent .otherNoticeBtn > div .label {
+    padding-right : 2vw;
+  }
 }

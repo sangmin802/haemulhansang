@@ -98,15 +98,15 @@ class Menu extends React.Component {
     const img3 = document.querySelector('.img3').classList;
     // if((img1 && img2 && img3) !== null){
       img1.add('img1Ani');
-      return new Promise((resolve, reject) => {
-        setTimeout(resolve, 1000);
-      }).then((resolve) => {
-        img2.add('img2Ani');
-        return new Promise((resolve2, reject2) => {
-          setTimeout(resolve2, 1000);
-        }).then((resolve2) => {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          img2.add('img2Ani');
+          resolve();
+        }, 1000)
+      }).then(() => {
+        setTimeout(() => {
           img3.add('img3Ani');
-        });
+        }, 1000);
       });
     // };
   };

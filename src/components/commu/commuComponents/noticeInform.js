@@ -46,7 +46,7 @@ class NoticeInform extends React.Component {
           </div>
         </div>
         <div className="goList">
-        <Link to="/community/commu1"><span>목록</span></Link>
+        <Link to="/community/commu1" onClick={() => {window.scrollTo(0,0)}}><span>목록</span></Link>
         </div>
       </div>
     );
