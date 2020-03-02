@@ -35,18 +35,18 @@ class NoticeInform extends React.Component {
           <div className="nextBtn">
             <div className="label">다음글</div>
             <div className="title">
-              {nextNotice ? <Link onClick={() => {window.scrollTo(0,0)}} to={`/community/commu1/${nextNotice.id}`}>{nextNotice.title}</Link> : '다음글이 없습니다.'}
+              {nextNotice ? <Link onClick={() => {window.scrollTo(0,0)}} to={`/haemulhansang/community/commu1/${nextNotice.id}`}>{nextNotice.title}</Link> : '다음글이 없습니다.'}
             </div>
           </div>
           <div className="prevBtn">
             <div className="label">이전글</div>
             <div className="title">
-              {prevNotice ? <Link onClick={() => {window.scrollTo(0,0)}} to={`/community/commu1/${prevNotice.id}`}>{prevNotice.title}</Link> : '이전글이 없습니다.'}
+              {prevNotice ? <Link onClick={() => {window.scrollTo(0,0)}} to={`/haemulhansang/community/commu1/${prevNotice.id}`}>{prevNotice.title}</Link> : '이전글이 없습니다.'}
             </div>
           </div>
         </div>
         <div className="goList">
-        <Link to="/community/commu1" onClick={() => {window.scrollTo(0,0)}}><span>목록</span></Link>
+        <Link to="/haemulhansang/community/commu1" onClick={() => {window.scrollTo(0,0)}}><span>목록</span></Link>
         </div>
       </div>
     );

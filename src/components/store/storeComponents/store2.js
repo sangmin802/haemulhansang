@@ -23,13 +23,13 @@ class Store2 extends React.Component {
     return(
       <div className="store2Content">
         <div className="title">
-          <img src="/img/store/gallery/photo_tit.png" alt="사진갤러리"/>
+          <img src="./img/store/gallery/photo_tit.png" alt="사진갤러리"/>
         </div>
         <div className="galleryWrap">
           {gallery.map(res => {
             return (
               <div className="gallery" key={res.id}>
-                <img src={`/img/store/gallery/${res.img}`} alt={res.name}/>
+                <img src={`./img/store/gallery/${res.img}`} alt={res.name}/>
               </div>
             );
           })}
@@ -39,7 +39,7 @@ class Store2 extends React.Component {
   };
 
   downGallery = async () => {
-    await fetch('/json/gallery.json').then(response => response.json()).then(data => {
+    await fetch('https://raw.githubusercontent.com/sangmin802/haemulhansang/master/public/json/gallery.json').then(response => response.json()).then(data => {
       this.setState({isLoading : false, gallery : data})
     });
   }

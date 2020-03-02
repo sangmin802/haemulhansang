@@ -11,7 +11,7 @@ class Fran3 extends React.Component {
     return(
       <div className="fran3Content">
         <div className="logo">
-          <img src="/img/fran/fran3/inquire_tit.png" alt="가맹문의" />
+          <img src="./img/fran/fran3/inquire_tit.png" alt="가맹문의" />
         </div>
         <form action="" className="fran3Form" onSubmit={this.onSubmit}>
           <div className="name">

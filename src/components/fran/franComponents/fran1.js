@@ -21,7 +21,7 @@ class Fran1 extends React.Component {
       <div className="fran1Content">
         <div className="titleImg">
           <div className="title">Opening Cost</div>
-          <img src="/img/fran/fran1/info_tit.png" alt="창업비용" />
+          <img src="./img/fran/fran1/info_tit.png" alt="창업비용" />
         </div>
         <div className="VAT">
           * VAT별도
@@ -41,14 +41,14 @@ class Fran1 extends React.Component {
         </ul>
         <div className="titleImg">
           <div className="title">Opening Process</div>
-          <img src="/img/fran/fran1/info_tit2.png" alt="창업절차" />
+          <img src="./img/fran/fran1/info_tit2.png" alt="창업절차" />
         </div>
         <div className="openProInfo">
           {openProcess.map(res => {
             return (
               <div className="openProStep" key={res.id}> 
                 <div className="numberImg">
-                  <img src={`/img/fran/fran1/info_N${res.id}.png`} alt={res.id} />
+                  <img src={`./img/fran/fran1/info_N${res.id}.png`} alt={res.id} />
                 </div>
                 <div className="title">
                   {res.title}

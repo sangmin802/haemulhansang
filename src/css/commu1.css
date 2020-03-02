@@ -48,9 +48,9 @@
 .commu1Content .noticeWrap .noticeLabelWrap .noticeLabel:nth-last-child(1) {
   border : 0;
 }
-.commu1Content .per5 { width : 5%; }
-.commu1Content .per10 { width : 10%; }
-.commu1Content .per70 { width : 70%; }
+.commu1Content .per5 { width : 15%; }
+.commu1Content .per10 { width : 15%; }
+.commu1Content .per70 { width : 55%; }
 .commu1Content .view { border : 0; }
 
 .commu1Content .noticeWrap .noticeContentWrap .noticeContent {

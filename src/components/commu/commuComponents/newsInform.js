@@ -32,7 +32,7 @@ class NewsInform extends React.Component {
         </div>
         <div className="newsInformDesc">
           <div className="newsInformImg">
-            <img src={`/img/commu/commu2/news${news.id}.jpg`} alt={news.title} />
+            <img src={`./img/commu/commu2/news${news.id}.jpg`} alt={news.title} />
           </div>
           {news.desc.split('<br>').map((line, index) => {
             return (<span key={index}>{line}<br/></span>)
@@ -42,18 +42,18 @@ class NewsInform extends React.Component {
           <div className="nextBtn">
             <div className="label">다음글</div>
             <div className="title">
-              {nextNews ? <Link onClick={() => {window.scrollTo(0,0)}} to={`/community/commu2/${nextNews.id}`}>{nextNews.title}</Link> : '다음글이 없습니다.'}
+              {nextNews ? <Link onClick={() => {window.scrollTo(0,0)}} to={`/haemulhansang/community/commu2/${nextNews.id}`}>{nextNews.title}</Link> : '다음글이 없습니다.'}
             </div>
           </div>
           <div className="prevBtn">
             <div className="label">이전글</div>
             <div className="title">
-              {prevNews ? <Link onClick={() => {window.scrollTo(0,0)}} to={`/community/commu2/${prevNews.id}`}>{prevNews.title}</Link> : '이전글이 없습니다.'}
+              {prevNews ? <Link onClick={() => {window.scrollTo(0,0)}} to={`/haemulhansang/community/commu2/${prevNews.id}`}>{prevNews.title}</Link> : '이전글이 없습니다.'}
             </div>
           </div>
         </div>
         <div className="goList">
-          <Link to="/community/commu2" onClick={() => {window.scrollTo(0,0)}}><span>목록</span></Link>
+          <Link to="/haemulhansang/community/commu2" onClick={() => {window.scrollTo(0,0)}}><span>목록</span></Link>
         </div>
       </div>
     );

@@ -23,9 +23,9 @@ class Menu extends React.Component {
     return(
       <div className="menu">
         <div className="mainBg">
-          <img className="img1" src="/img/menu/sub2_img.png" alt="food1"/>
-          <img className="img2" src="/img/menu/sub2_img2.png" alt="food2"/>
-          <img className="img3" src="/img/menu/sub2_img3.png" alt="food3"/>
+          <img className="img1" src="./img/menu/sub2_img.png" alt="food1"/>
+          <img className="img2" src="./img/menu/sub2_img2.png" alt="food2"/>
+          <img className="img3" src="./img/menu/sub2_img3.png" alt="food3"/>
         </div>
         <div className="content">
           <MenuTitle title={title} url={url} />
@@ -35,7 +35,7 @@ class Menu extends React.Component {
                 {title}
               </div>
               <div className="img">
-                <img src="/img/menu/menu_tit.png" alt="menu"/>
+                <img src="./img/menu/menu_tit.png" alt="menu"/>
               </div>
             </div>
             <div className="menuWrap">
@@ -43,7 +43,7 @@ class Menu extends React.Component {
                 return (
                   <div className="menuItem" key={res.id}>
                     <div className="img">
-                      <img src={`/img/menu/${res.img}`} alt={res.name} />
+                      <img src={`./img/menu/${res.img}`} alt={res.name} />
                     </div>
                     <div className="inform">
                       <div className="title">
@@ -87,7 +87,7 @@ class Menu extends React.Component {
   getItems = async () => {
     const { match : { params : { value } } } = this.props;
     
-    await fetch(`/json/${value}.json`).then((response) => response.json()).then((data) => {
+    await fetch(`https://raw.githubusercontent.com/sangmin802/haemulhansang/master/public/json/${value}.json`).then((response) => response.json()).then((data) => {
       this.setState({itemLoading : true, data : data});
     });
   };

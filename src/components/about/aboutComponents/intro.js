@@ -8,7 +8,7 @@ class Intro extends React.Component {
       <div className="introContent">
         <div className="section1">
           <div className="img">
-            <img src="/img/about/intro/Binfo_img.jpg" alt="해물한상" />
+            <img src="./img/about/intro/Binfo_img.jpg" alt="해물한상" />
           </div>
           <div className="text">
             <div className="text1 halfTitle">
@@ -44,7 +44,7 @@ class Intro extends React.Component {
             </div>
           </div>
           <div className="img">
-            <img src="/img/about/intro/Binfo_img2.jpg" alt="식당내부" />
+            <img src="./img/about/intro/Binfo_img2.jpg" alt="식당내부" />
           </div>       
         </div>
         <div className="section4">
@@ -63,7 +63,7 @@ class Intro extends React.Component {
         </div>
         <div className="section5">
           <div className="img">
-            <img src="/img/about/intro/Binfo_img3.png" alt="고소함" />
+            <img src="./img/about/intro/Binfo_img3.png" alt="고소함" />
           </div>   
           <div className="text">
             <div className="text1 halfTitle">
@@ -78,7 +78,7 @@ class Intro extends React.Component {
         </div>            
         <div className="section6">
           <div className="img">
-            <img src="/img/about/intro/Binfo_img6.jpg" alt="2019고객선호브랜드지수1위" />
+            <img src="./img/about/intro/Binfo_img6.jpg" alt="2019고객선호브랜드지수1위" />
           </div>   
           <div className="text">
             <div className="text1 halfTitle">

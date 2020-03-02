@@ -6,19 +6,19 @@ class MenuTitle extends React.Component {
     let desc, src = null;
     if(url.indexOf('about') !== -1){
       desc = `차별화된 감성과 전약을 추구하는\n해물한상을 소개합니다.`;
-      src = "/img/about/sub_tit.png";
+      src = "./img/about/sub_tit.png";
     }else if(url.indexOf('menu') !== -1){
       desc = `바다느낌 가득한\n해물한상의 메뉴를 소개합니다.`;
-      src = "/img/menu/sub_tit2.png";
+      src = "./img/menu/sub_tit2.png";
     }else if(url.indexOf('franchise') !== -1){
       desc = `성공창업의 든든한 파트너!\n해물한상을 소개합니다.`;
-      src = "/img/fran/sub_tit3.png";
+      src = "./img/fran/sub_tit3.png";
     }else if(url.indexOf('store') !== -1){
       desc = `전국 곳곳에 숨어있는 맛집\n해물한상 매장을 소개합니다.`;
-      src = "/img/store/sub_tit4.png";
+      src = "./img/store/sub_tit4.png";
     }else if(url.indexOf('commu') !== -1){
       desc = `생동감 있는 해물한상의 스토리`;
-      src = "/img/commu/sub_tit5.png";
+      src = "./img/commu/sub_tit5.png";
     }
 
     return(

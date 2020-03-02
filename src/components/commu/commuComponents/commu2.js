@@ -24,7 +24,7 @@ class Commu2 extends React.Component {
     return(
       <div className="commu2Content">
         <div className="titleImg">
-          <img src="/img/commu/commu2/news_tit.png" alt="언론보도" />
+          <img src="./img/commu/commu2/news_tit.png" alt="언론보도" />
         </div>
         <Route exact path="/community/commu2" render = {(props) => (<NewsWrap {...props} data = {data} />)} />
         <Route path="/community/commu2/:id"  render = {(props) => (<NewsInform {...props} data = {data} />)} />
@@ -33,7 +33,7 @@ class Commu2 extends React.Component {
   };
 
   newsLoad = async () => {
-    await fetch('/json/news.json').then(response => response.json()).then(data => {
+    await fetch('https://raw.githubusercontent.com/sangmin802/haemulhansang/master/public/json/news.json').then(response => response.json()).then(data => {
       this.setState({isLoading : false, data : data});
     })
   };
