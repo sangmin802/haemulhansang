@@ -139,6 +139,24 @@
   .introContent .section1, .introContent .section3, .introContent .section5 {
     padding : 0 2vw;
   }
+  .introContent .text .halfTitle {
+    font-size : 4vw;
+    text-align : center;
+  }
+  .introContent .text .halfText {
+    font-size : 2.5vw;
+    line-height : 3vw;
+    text-align : center;
+  }
+  .introContent .text .fullTitle {
+    font-size : 4vw;
+    text-align : center;
+  }
+  .introContent .text .fullText {
+    font-size : 2.5vw;
+    line-height : 3vw;
+    text-align : center;
+  }
 }
 @media screen and (min-width : 0px) and (max-width : 767px) {
   .introContent .section1, .introContent .section3, .introContent .section5 {

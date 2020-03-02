@@ -20,7 +20,7 @@ class App extends React.Component {
         mobile();
       }else if(width > 1180){
         pc();
-        if(window.location.pathname === '/haemulhansang/'){
+        if(window.location.hash === '#/' || window.location.hash === ''){
           goIndex();
         };
       };
@@ -31,7 +31,6 @@ class App extends React.Component {
   scrollTop = null;
 
   render(){
-    console.log(window.location.pathname)
     const { isIndex, selectedPage, goIndex, selectedSubPage, isLoading, routeList, subRouteList, isMobile } = this.props;
     if(isLoading){
       return <div className="loading">Loading...</div>
@@ -204,12 +203,13 @@ class App extends React.Component {
     }else if(width > 1180){
       pc();
       this.slideMenu();
-      if(window.location.pathname === '/haemulhansang/'){
+      console.log(window.location)
+      if(window.location.hash === '#/' || window.location.hash === ''){
         this.downData();
         goIndex();
       }
       window.onpopstate  = () => {
-        if(window.location.pathname === '/haemulhansang/'){
+        if(window.location.hash === '#/' || window.location.hash === ''){
           goIndex();
         };
       };

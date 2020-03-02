@@ -10,7 +10,7 @@ class NewsWrap extends React.Component {
         {data.map(res => {
           return (
             <div className="newsCont" key={res.id}>
-              <Link to={`/haemulhansang/community/commu2/${res.id}`} onClick={() => {window.scrollTo(0,0)}}>
+              <Link to={`/community/commu2/${res.id}`} onClick={() => {window.scrollTo(0,0)}}>
                 <div className="img">
                   <img src={`/haemulhansang/img/commu/commu2/news${res.id}.jpg`} alt={res.title} />
                 </div>

@@ -25,8 +25,8 @@ class Commu1 extends React.Component {
         <div className="titleImg">
           <img src="/haemulhansang/img/commu/commu1/notice_tit.png" alt="공지사항" />
         </div>
-        <Route exact path="/haemulhansang/community/commu1" render={(props) => (<NoticeWrap {...props} data = {data} />)} />
-        <Route path="/haemulhansang/community/commu1/:id" render={(props) => (<NoticeInform {...props} data = {data} />)} />
+        <Route exact path="/community/commu1" render={(props) => (<NoticeWrap {...props} data = {data} />)} />
+        <Route path="/community/commu1/:id" render={(props) => (<NoticeInform {...props} data = {data} />)} />
       </div>
     );
   };

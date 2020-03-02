@@ -26,8 +26,8 @@ class Commu2 extends React.Component {
         <div className="titleImg">
           <img src="/haemulhansang/img/commu/commu2/news_tit.png" alt="언론보도" />
         </div>
-        <Route exact path="/haemulhansang/community/commu2" render = {(props) => (<NewsWrap {...props} data = {data} />)} />
-        <Route path="/haemulhansang/community/commu2/:id"  render = {(props) => (<NewsInform {...props} data = {data} />)} />
+        <Route exact path="/community/commu2" render = {(props) => (<NewsWrap {...props} data = {data} />)} />
+        <Route path="/community/commu2/:id"  render = {(props) => (<NewsInform {...props} data = {data} />)} />
       </div>
     );
   };
