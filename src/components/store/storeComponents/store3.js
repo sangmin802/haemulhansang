@@ -28,11 +28,11 @@ class Store3 extends React.Component {
       <div className="store3Content">
         <div className="section1">
           <div className="img">
-            <img src="./img/store/interior/interior_img.jpg" alt="인테리어컨셉" />
+            <img src="/haemulhansang/img/store/interior/interior_img.jpg" alt="인테리어컨셉" />
           </div>
           <div className="desc">
             <div className="title">
-              <img src="./img/store/interior/interior_tit.png" alt="인테리어컨셉" />
+              <img src="/haemulhansang/img/store/interior/interior_tit.png" alt="인테리어컨셉" />
             </div>
             <div className="info1 info">
               <div className="label">
@@ -64,7 +64,7 @@ class Store3 extends React.Component {
         <div className="section2">
           <div className="section2ContWrap">
             <div className="title">
-              <img src="./img/store/interior/interior_tit2.png" alt="해물한상" />
+              <img src="/haemulhansang/img/store/interior/interior_tit2.png" alt="해물한상" />
             </div>
             <div className="desc">
               해물한상의 인테리어는 그린 계열의 컬러를 메인으로 사용하여 제주 청정 해역이 주는 생동감을 연출하였으며,<br />
@@ -75,16 +75,16 @@ class Store3 extends React.Component {
         <div className="section3">
           <div className="btnWrap">
             <div className="interiorBtn btn selectedBtn" onClick={this.btnClick} >
-              <img src="./img/store/interior/interior_tab.png" alt="인테리어" />
+              <img src="/haemulhansang/img/store/interior/interior_tab.png" alt="인테리어" />
             </div>
             <div className="exteriorBtn btn" onClick={this.btnClick}>
-              <img src="./img/store/interior/interior_tab2.png" alt="익스테리어" />
+              <img src="/haemulhansang/img/store/interior/interior_tab2.png" alt="익스테리어" />
             </div>
           </div>
           {interior ? 
             <div className="imgSlide">
               {arr.map((res, index) => {
-                return <img key={index} src={`./img/store/interior/interior${res}.jpg`} width="100%" alt={`interior${res}`} className="slideImg" onMouseDown={this.mouseDown} onMouseMove={this.mouseMove} onMouseUp={() => {
+                return <img key={index} src={`/haemulhansang/img/store/interior/Interior${res}.jpg`} width="100%" alt={`interior${res}`} className="slideImg" onMouseDown={this.mouseDown} onMouseMove={this.mouseMove} onMouseUp={() => {
                   this.touch = false;
                 }} onTouchStart={this.mouseDown} onTouchMove={this.mouseMove} onTouchEnd={() => {
                   this.touch = false;
@@ -94,7 +94,7 @@ class Store3 extends React.Component {
             :
             <div className="imgSlide">
               {arr.map((res, index) => {
-                return <img key={index} src={`./img/store/interior/exterior${res}.jpg`} width="100%" alt={`exterior${res}`} className="slideImg" onMouseDown={this.mouseDown} onMouseMove={this.mouseMove} onMouseUp={() => {
+                return <img key={index} src={`/haemulhansang/img/store/interior/exterior${res}.jpg`} width="100%" alt={`exterior${res}`} className="slideImg" onMouseDown={this.mouseDown} onMouseMove={this.mouseMove} onMouseUp={() => {
                   this.touch = false;
                 }} />
               })}                  
@@ -103,13 +103,13 @@ class Store3 extends React.Component {
           {interior ? 
             <div className="imgSelect">
               {arr2.map((res, index) => {
-                return <img key={index} onMouseUp={() => this.clickSlide(index)} src={`./img/store/interior/interior${res}.jpg`} alt={`interior${res}`} />
+                return <img key={index} onMouseUp={() => this.clickSlide(index)} src={`/haemulhansang/img/store/interior/Interior${res}.jpg`} alt={`interior${res}`} />
               })}               
             </div>
             :
             <div className="imgSelect">
               {arr2.map((res, index) => {
-                return <img key={index} onMouseUp={() => this.clickSlide(index)} src={`./img/store/interior/exterior${res}.jpg`} alt={`exterior${res}`} />
+                return <img key={index} onMouseUp={() => this.clickSlide(index)} src={`/haemulhansang/img/store/interior/exterior${res}.jpg`} alt={`exterior${res}`} />
               })}                  
             </div>
           }

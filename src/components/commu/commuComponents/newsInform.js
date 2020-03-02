@@ -32,7 +32,7 @@ class NewsInform extends React.Component {
         </div>
         <div className="newsInformDesc">
           <div className="newsInformImg">
-            <img src={`./img/commu/commu2/news${news.id}.jpg`} alt={news.title} />
+            <img src={`/haemulhansang/img/commu/commu2/news${news.id}.jpg`} alt={news.title} />
           </div>
           {news.desc.split('<br>').map((line, index) => {
             return (<span key={index}>{line}<br/></span>)

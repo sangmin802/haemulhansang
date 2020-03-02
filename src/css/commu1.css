@@ -14,7 +14,7 @@
 .commu1Content .titleImg::before {
   content : '';
   position : absolute;
-  background : url('/img/commu/sstit.png') no-repeat;
+  background : url('/haemulhansang/img/commu/sstit.png') no-repeat;
   width : 40px;
   height : 60px;
   left : 0;

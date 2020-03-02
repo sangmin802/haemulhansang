@@ -7,7 +7,7 @@
   left : -200px;
   width : 66%;
   height : 100vh;
-  background : url('/img/index/main_visual.jpg') no-repeat;
+  background : url('/haemulhansang/img/index/main_visual.jpg') no-repeat;
   background-position : center center;
   opacity : 0;
 }
@@ -26,7 +26,7 @@
   width : 34%;
   height : 100vh;
   padding : 40px 44px;
-  background : url('/img/index/main_con_bg.jpg') no-repeat;
+  background : url('/haemulhansang/img/index/main_con_bg.jpg') no-repeat;
   background-size : cover;
   opacity : 0;
 }
@@ -61,13 +61,13 @@
 .mainComponent .mainNav .arrow::after {
   content : '';
   position : absolute;
-  background : url('/img/index/main_con_arrow.png') no-repeat;
+  background : url('/haemulhansang/img/index/main_con_arrow.png') no-repeat;
   width : 48px;
   height : 12px;
 }
 .mainComponent .mainNav .menu1 {
   position : relative;
-  background : url('/img/index/main_con_img.png') no-repeat;
+  background : url('/haemulhansang/img/index/main_con_img.png') no-repeat;
   background-position : right;
   border-bottom : 1px solid #0a8b04;
   padding : 43px 0 54px;
@@ -77,14 +77,14 @@
   width : 156px;
   height : 35px;
   position : absolute;
-  background : url('/img/index/main_con_line.png') no-repeat;
+  background : url('/haemulhansang/img/index/main_con_line.png') no-repeat;
   bottom : 0;
   right : 0;
 }
 .mainNav .menu1 .title {
   color : #006835;
   font-size : 1.375em;
-  background : url('/img/index/main_con_logo.png') no-repeat;
+  background : url('/haemulhansang/img/index/main_con_logo.png') no-repeat;
   background-position : 0 center;
   padding-left : 96px;
 }
@@ -97,12 +97,12 @@
 .mainNav .menu2 .menu2Img {
   height : 193px;
   margin-bottom : 20px;
-  background : url('/img/index/main_con_img2.png') no-repeat;
+  background : url('/haemulhansang/img/index/main_con_img2.png') no-repeat;
 }
 .mainNav .menu2 .title {
   color : #744d28;
   font-size : 1.375em;
-  background : url('/img/index/main_con_logo2.png') no-repeat;
+  background : url('/haemulhansang/img/index/main_con_logo2.png') no-repeat;
   background-position : 0 center;
   padding-left : 96px;
 }
@@ -114,7 +114,7 @@
 .mainNav .menu2 .menu2Content::after {
   content : '';
   position : absolute;
-  background : url('/img/index/main_con_arrow.png') no-repeat;
+  background : url('/haemulhansang/img/index/main_con_arrow.png') no-repeat;
   top : 50%;
   margin-top : 100px;
   right : 0;
@@ -126,7 +126,7 @@
   width : 156px;
   height : 35px;
   position : absolute;
-  background : url('/img/index/main_con_line2.png') no-repeat;
+  background : url('/haemulhansang/img/index/main_con_line2.png') no-repeat;
   bottom : 0;
   left : 0;
 }
@@ -137,7 +137,7 @@
 }
 .mainNav .menu3 .menu3Content {
   padding-left : 240px;
-  background : url('/img/index/main_con_img3.png') no-repeat;
+  background : url('/haemulhansang/img/index/main_con_img3.png') no-repeat;
 }
 .mainNav .menu3 .title {
   color : black;

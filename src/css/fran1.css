@@ -17,7 +17,7 @@
 .fran1Content .titleImg .title::before {
   content : '';
   position : absolute;
-  background : url('/img/fran/fran1/sstit.png') no-repeat;
+  background : url('/haemulhansang/img/fran/fran1/sstit.png') no-repeat;
   width : 40px;
   height : 60px;
   left : 50%;
@@ -47,14 +47,14 @@
 }
 .fran1Content .openCostInfo .title {
   font-size : 1.375em;
-  background : url('/img/fran/fran1/infoT_bg.png') no-repeat;
+  background : url('/haemulhansang/img/fran/fran1/infoT_bg.png') no-repeat;
   font-weight : bold;
   background-position : center;
   color : white;
 }
 .fran1Content .openCostInfo .info {
   font-size : 1em;
-  background : url('/img/fran/fran1/infoT_bg2.png') no-repeat;
+  background : url('/haemulhansang/img/fran/fran1/infoT_bg2.png') no-repeat;
   background-position : center;
   color : black;
 }
@@ -83,7 +83,7 @@
   width : calc((97% / 4) - 0.01px);
   min-height : 192px;
   padding : 59px 20px 30px;
-  background : url('/img/fran/fran1/info_bg.png') no-repeat;
+  background : url('/haemulhansang/img/fran/fran1/info_bg.png') no-repeat;
   background-size : 100% 100%;
   margin-right : 1%;
   margin-bottom : 3%;
@@ -97,7 +97,7 @@
 .fran1Content .openProInfo .openProStep .numberImg::before {
   content : '';
   position : absolute;
-  background : url('/img/fran/fran1/info_line.png') no-repeat;
+  background : url('/haemulhansang/img/fran/fran1/info_line.png') no-repeat;
   width : 117px;
   height : 22px;
   left : -13px;
@@ -130,7 +130,7 @@
     width : calc((98% / 3) - 0.01px);
     min-height : 192px;
     padding : 59px 20px 30px;
-    background : url('/img/fran/fran1/info_bg.png') no-repeat;
+    background : url('/haemulhansang/img/fran/fran1/info_bg.png') no-repeat;
     background-size : 100% 100%;
     margin-right : 1%;
     margin-bottom : 3%;
@@ -167,7 +167,7 @@
     width : 100%;
     min-height : 192px;
     padding : 59px 20px 30px;
-    background : url('/img/fran/fran1/info_bg.png') no-repeat;
+    background : url('/haemulhansang/img/fran/fran1/info_bg.png') no-repeat;
     background-size : 100% 100%;
     margin-bottom : 3%;
   }

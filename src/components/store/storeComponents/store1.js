@@ -50,7 +50,7 @@ class Store1 extends React.Component {
         <div className="searchArea">
           <div className="searchTitle">
             <div>지역을 선택하시거나 매장명을 입력하시면<br />해당 지역의 매장이 검색됩니다.</div>
-            <img src="./img/store/findstore/store_tit.png" alt="해물한상 매장을 찾으시나요?" />
+            <img src="/haemulhansang/img/store/findstore/store_tit.png" alt="해물한상 매장을 찾으시나요?" />
           </div>
           <div className="searchWrap">
             <div className="searchSelect">
@@ -80,7 +80,7 @@ class Store1 extends React.Component {
               return (
               <div className="store" key={res.id}>
                 <div className="img">
-                  <img src={`./img/store/findstore/${res.img}`} alt={res.name}/>
+                  <img src={`/haemulhansang/img/store/findstore/${res.img}`} alt={res.name}/>
                 </div>
                 <div className="desc">
                   <div className="title">
@@ -108,7 +108,7 @@ class Store1 extends React.Component {
   };
 
   downData = () => {
-    const urls = ['https://raw.githubusercontent.com/sangmin802/haemulhansang/master/public/json/storedata.json', 'https://raw.githubusercontent.com/sangmin802/haemulhansang/master/public/json/district.json'];
+    const urls = ['/haemulhansang/json/storedata.json', '/haemulhansang/json/district.json'];
     Promise.all(
       urls.map((res) => {
         return fetch(res).then((response) => {

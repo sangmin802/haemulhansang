@@ -8,10 +8,10 @@ class Oper extends React.Component {
       <div className="operContent">
         <div className="title">
           <div className="logo">
-            <img src="./img/about/about/gree_img.png" alt="핵가족" />
+            <img src="/haemulhansang/img/about/about/gree_img.png" alt="핵가족" />
           </div>
           <div className="titleText">
-            <img src="./img/about/about/gree_img2.png" alt="외식전문회사 핵가족" />
+            <img src="/haemulhansang/img/about/about/gree_img2.png" alt="외식전문회사 핵가족" />
           </div>
         </div>
         <div className="detailContent">
@@ -25,7 +25,7 @@ class Oper extends React.Component {
         </div>
         <div className="headMaster">
           대표이사
-          <img src="./img/about/about/gree_img3.png" alt="양동모" />
+          <img src="/haemulhansang/img/about/about/gree_img3.png" alt="양동모" />
         </div>
       </div>
     );

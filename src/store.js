@@ -10,7 +10,7 @@ export default createStore((state, action) => {
         selectedPage : null,
         routeList : [],
         subRouteList : [],
-        selectedSubPage : 1,
+        selectedSubPage : null,
       };
       sessionStorage.setItem('state', JSON.stringify(state));
       return state;

@@ -10,7 +10,7 @@
 .store2Content .title::before {
   content : '';
   position : absolute;
-  background : url('/img/store/sstit.png') no-repeat;
+  background : url('/haemulhansang/img/store/sstit.png') no-repeat;
   width : 40px;
   height : 60px;
   left : 0;

@@ -38,7 +38,7 @@
 .fran2Content .section:nth-child(2n) .desc::after {
   content : '';
   position : absolute;
-  background : url('/img/fran/fran2/menuCp_line.png') no-repeat;
+  background : url('/haemulhansang/img/fran/fran2/menuCp_line.png') no-repeat;
   width : 156px;
   height : 35px;
   right : -10px;
@@ -47,7 +47,7 @@
 .fran2Content .section:nth-child(2n-1) .desc::after {
   content : '';
   position : absolute;
-  background : url('/img/fran/fran2/menuCp_line2.png') no-repeat;
+  background : url('/haemulhansang/img/fran/fran2/menuCp_line2.png') no-repeat;
   width : 156px;
   height : 35px;
   left : -10px;
@@ -76,7 +76,7 @@
   position : absolute;
   width : 34px;
   height : 47px;
-  background : url('/img/about/comp/sstit.png') no-repeat;
+  background : url('/haemulhansang/img/about/comp/sstit.png') no-repeat;
   left : 50%;
   margin-left : -124px;
   top : -15px;

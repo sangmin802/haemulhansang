@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { HashRouter, Route, Link } from 'react-router-dom'
 
 import Components from '../components.js';
 
@@ -20,7 +20,7 @@ class App extends React.Component {
         mobile();
       }else if(width > 1180){
         pc();
-        if(window.location.pathname === '/'){
+        if(window.location.pathname === '/haemulhansang/'){
           goIndex();
         };
       };
@@ -31,6 +31,7 @@ class App extends React.Component {
   scrollTop = null;
 
   render(){
+    console.log(window.location.pathname)
     const { isIndex, selectedPage, goIndex, selectedSubPage, isLoading, routeList, subRouteList, isMobile } = this.props;
     if(isLoading){
       return <div className="loading">Loading...</div>
@@ -40,7 +41,7 @@ class App extends React.Component {
       menubar = 
         <div className="mobileMenu">
           <div className="logo">
-            <Link to='/haemulhansang' onClick={() => {
+            <Link to='/' onClick={() => {
               goIndex(); 
               window.scrollTo(0,0);
               const line = document.querySelectorAll('.line');
@@ -54,7 +55,7 @@ class App extends React.Component {
               mobileMenu.classList.remove('mdisplayblock');
               root.style.cssText = '';
             }}>
-              <img src="./img/index/logo.jpg" alt="해물한상" />
+              <img src="/haemulhansang/img/index/logo.jpg" alt="해물한상" />
             </Link>
           </div>
           <div className ="hamburger" onClick={this.hamAni}>
@@ -68,16 +69,16 @@ class App extends React.Component {
         menubar = 
           <div className="indexRoute">
             <div className="logo">
-              <img src="./img/index/main_logo.png" alt="해물한상" />
+              <img src="/haemulhansang/img/index/main_logo.png" alt="해물한상" />
             </div>
             <ul className="route">
-              <li className="normal"><Link to='/haemulhansang/about/oper' data-index = '1' onClick={this.goPage.bind(this)}>ABOUT US</Link></li>
-              <li className="normal"><Link to='/haemulhansang/menu/menu1' data-index = '2' onClick={this.goPage.bind(this)}>MENU</Link></li>
-              <li className="normal"><Link to='/haemulhansang/franchise/fran1' data-index = '3' onClick={this.goPage.bind(this)}>FRANCHISE</Link></li>
-              <li className="normal"><Link to='/haemulhansang/store/store1' data-index = '4' onClick={this.goPage.bind(this)}>STORE</Link></li>
-              <li className="normal"><Link to='/haemulhansang/community/commu1' data-index = '5' onClick={this.goPage.bind(this)}>COMMUNITY</Link></li>
-              <li className="notNormal1 notNormal"><Link to='/haemulhansang/franchise/fran2' data-index = '3' data-subindex = '10' onClick={this.goPage.bind(this)}>메뉴경쟁력</Link></li>
-              <li className="notNormal2 notNormal"><Link to='/haemulhansang/store/store1' data-index = '4' onClick={this.goPage}>매장찾기</Link></li>
+              <li className="normal"><Link to='/about/oper' data-index = '1' onClick={this.goPage.bind(this)}>ABOUT US</Link></li>
+              <li className="normal"><Link to='/menu/menu1' data-index = '2' onClick={this.goPage.bind(this)}>MENU</Link></li>
+              <li className="normal"><Link to='/franchise/fran1' data-index = '3' onClick={this.goPage.bind(this)}>FRANCHISE</Link></li>
+              <li className="normal"><Link to='/store/store1' data-index = '4' onClick={this.goPage.bind(this)}>STORE</Link></li>
+              <li className="normal"><Link to='/community/commu1' data-index = '5' onClick={this.goPage.bind(this)}>COMMUNITY</Link></li>
+              <li className="notNormal1 notNormal"><Link to='/franchise/fran2' data-index = '3' data-subindex = '10' onClick={this.goPage.bind(this)}>메뉴경쟁력</Link></li>
+              <li className="notNormal2 notNormal"><Link to='/store/store1' data-index = '4' onClick={this.goPage}>매장찾기</Link></li>
             </ul>
           </div>
       }else{
@@ -87,7 +88,7 @@ class App extends React.Component {
               <div className="innerPageRoute">
                 <div className="top">
                   <div className="logo">
-                    <Link to='/haemulhansang' onClick={() => {goIndex(); window.scrollTo(0,0)}}><img src="./img/index/logo.jpg" alt="해물한상" /></Link>
+                    <Link to='/' onClick={() => {goIndex(); window.scrollTo(0,0)}}><img src="/haemulhansang/img/index/logo.jpg" alt="해물한상" /></Link>
                   </div>
                   <div className="route">
                     {routeList.map(res => {
@@ -121,7 +122,7 @@ class App extends React.Component {
     }
     return (
       <div className="App">
-        <Router>
+        <HashRouter>
           {menubar}
           <div className="mobileMenuWrap">
             <div className="menu">
@@ -146,23 +147,23 @@ class App extends React.Component {
               })}
             </div>
           </div>
-          <Route exact path="/haemulhansang/" component={Components.Main} />
-          <Route path="/haemulhansang/about/:value" component={Components.About} />
-          <Route path="/haemulhansang/menu/:value" component={Components.Menu} />
-          <Route path="/haemulhansang/franchise/:value" component={Components.Fran} />
-          <Route path="/haemulhansang/store/:value" component={Components.Store} />
-          <Route path="/haemulhansang/community/:value" component={Components.Commu} />
+          <Route exact path="/" component={Components.Main} />
+          <Route path="/about/:value" component={Components.About} />
+          <Route path="/menu/:value" component={Components.Menu} />
+          <Route path="/franchise/:value" component={Components.Fran} />
+          <Route path="/store/:value" component={Components.Store} />
+          <Route path="/community/:value" component={Components.Commu} />
           <footer className="footer">
             <div className="topWrap">
               <div className="brand">
-                <img src="./img/index/f_logo.png" alt="해물한상" />
+                <img src="/haemulhansang/img/index/f_logo.png" alt="해물한상" />
               </div>
               <div className="sns">
                 <div className="facebook">
-                  <img src="./img/index/face.png" alt="페이스북" />
+                  <img src="/haemulhansang/img/index/face.png" alt="페이스북" />
                 </div>
                 <div className="insta">
-                  <img src="./img/index/insta.png" alt="인스타그램" />
+                  <img src="/haemulhansang/img/index/insta.png" alt="인스타그램" />
                 </div>
               </div>
             </div>
@@ -180,15 +181,14 @@ class App extends React.Component {
             </div>
             <div className="copyright">Copyright (C) 2019 jeju. All Rights Reservered</div>
           </footer>
-        </Router>
+        </HashRouter>
       </div>
     );
   };
 
-  downData = async () => {
+  downData = () => {
     const { loaded } = this.props;
-    await fetch('https://raw.githubusercontent.com/sangmin802/haemulhansang/master/public/json/data.json').then((response) => response.json()).then((data) => {
-      console.log('?')
+    fetch('/haemulhansang/json/data.json').then((response) => response.json()).then((data) => {
       loaded(data);
     }).catch((err) => {
       console.log(err);
@@ -196,7 +196,6 @@ class App extends React.Component {
   };
 
   componentDidMount = () => {
-    console.log('생성')
     const { goIndex, mobile, pc } = this.props;
     const width = window.innerWidth;
     if(width <= 1180){
@@ -205,12 +204,12 @@ class App extends React.Component {
     }else if(width > 1180){
       pc();
       this.slideMenu();
-      if(window.location.pathname === '/'){
+      if(window.location.pathname === '/haemulhansang/'){
         this.downData();
         goIndex();
       }
       window.onpopstate  = () => {
-        if(window.location.pathname === '/'){
+        if(window.location.pathname === '/haemulhansang/'){
           goIndex();
         };
       };

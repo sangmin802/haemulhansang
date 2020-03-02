@@ -42,7 +42,7 @@ class Main extends React.Component {
               <div className="menu3Content menuContent">
                 <div className="menu3Inform">
                   <div className="img">
-                    <img src="./img/index/main_con_logo3.png" alt="해물한상 STORE" />
+                    <img src="/haemulhansang/img/index/main_con_logo3.png" alt="해물한상 STORE" />
                   </div>
                   <div className="title">STORE</div>
                   <div className="text">

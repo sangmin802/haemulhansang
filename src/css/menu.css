@@ -4,7 +4,7 @@
   width : 100%;
   height : 350px;
   margin-top : 80px;
-  background : url('/img/menu/sub_visual2.jpg') no-repeat;
+  background : url('/haemulhansang/img/menu/sub_visual2.jpg') no-repeat;
   background-size : cover;
   background-position : center;
 }
@@ -15,7 +15,7 @@
 .menu .content .aniImg {
   width : 62px;
   height : 60px;
-  background : url('/img/about/sub_visual_logo.png') no-repeat;
+  background : url('/haemulhansang/img/about/sub_visual_logo.png') no-repeat;
   position : absolute;
   left : 50%;
   margin-left : -31px;
@@ -38,7 +38,7 @@
   flex-direction: column;
   align-items : center;
   justify-content : center;
-  background : url('/img/about/sub_tit_bg.png') no-repeat;
+  background : url('/haemulhansang/img/about/sub_tit_bg.png') no-repeat;
   background-position : center;
   position : absolute;
   left : 50%;
@@ -135,7 +135,7 @@
   position : absolute;
   width : 40px;
   height : 50px;
-  background : url('/img/menu/sstit.png') no-repeat;
+  background : url('/haemulhansang/img/menu/sstit.png') no-repeat;
   left : 0;
   margin-left : -40px;
 }

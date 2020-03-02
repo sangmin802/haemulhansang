@@ -19,7 +19,7 @@
 .store3Content .section1 .desc .title::before {
   content : '';
   position : absolute;
-  background : url('/img/store/sstit.png') no-repeat;
+  background : url('/haemulhansang/img/store/sstit.png') no-repeat;
   width : 40px;
   height : 60px;
   left : 0;
@@ -49,7 +49,7 @@
 }
 .store3Content .section2 {
   width : 100%;
-  background : url('/img/store/interior/interior_bg.jpg');
+  background : url('/haemulhansang/img/store/interior/interior_bg.jpg');
   background-size : cover;
   padding: 116px 0 114px;
   margin-bottom : 136px;
@@ -84,7 +84,7 @@
   margin-right : 0;
 }
 .selectedBtn {
-  background : url('/img/store/interior/interior_tab_on.png') no-repeat !important;
+  background : url('/haemulhansang/img/store/interior/interior_tab_on.png') no-repeat !important;
   background-size : 100% 100% !important;
 }
 .imgSlide {

@@ -7,11 +7,11 @@ class Comp extends React.Component {
     return(
       <div className="compContent">
         <div className="logo">
-          <img src="./img/about/comp/Bcp_tit.png" alt="브랜드경쟁력" />
+          <img src="/haemulhansang/img/about/comp/Bcp_tit.png" alt="브랜드경쟁력" />
         </div>
         <div className="sectionType1 section">
           <div className="img">
-            <img src="./img/about/comp/Bcp_img.jpg" alt="해산물 전문 프랜차이즈" />
+            <img src="/haemulhansang/img/about/comp/Bcp_img.jpg" alt="해산물 전문 프랜차이즈" />
           </div>
           <div className="text">
             <div className="title">
@@ -32,12 +32,12 @@ class Comp extends React.Component {
             </div>
           </div>
           <div className="img">
-            <img src="./img/about/comp/Bcp_img2.jpg" alt="맛의 유지" />
+            <img src="/haemulhansang/img/about/comp/Bcp_img2.jpg" alt="맛의 유지" />
           </div>
         </div>
         <div className="sectionType1 section">
           <div className="img">
-            <img src="./img/about/comp/Bcp_img3.jpg" alt="두터운 고객 타깃층" />
+            <img src="/haemulhansang/img/about/comp/Bcp_img3.jpg" alt="두터운 고객 타깃층" />
           </div>
           <div className="text">
             <div className="title">
@@ -58,7 +58,7 @@ class Comp extends React.Component {
             </div>
           </div>
           <div className="img">
-            <img src="./img/about/comp/Bcp_img4.jpg" alt="낮에도 밤에도" />
+            <img src="/haemulhansang/img/about/comp/Bcp_img4.jpg" alt="낮에도 밤에도" />
           </div>
         </div>
       </div>

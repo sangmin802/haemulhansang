@@ -7,11 +7,11 @@ class Fran2 extends React.Component {
     return(
       <div className="fran2Content">
         <div className="logo">
-          <img src="./img/fran/fran2/menuCp_tit.png" alt="브랜드경쟁력" />
+          <img src="/haemulhansang/img/fran/fran2/menuCp_tit.png" alt="브랜드경쟁력" />
         </div>
         <div className="sectionType1 section">
           <div className="img">
-            <img src="./img/fran/fran2/menuCp_img.jpg" alt="특제화된 재료" />
+            <img src="/haemulhansang/img/fran/fran2/menuCp_img.jpg" alt="특제화된 재료" />
           </div>
           <div className="text">
             <div className="title">
@@ -38,12 +38,12 @@ class Fran2 extends React.Component {
             </div>
           </div>
           <div className="img">
-            <img src="./img/fran/fran2/menuCp_img2.jpg" alt="해산물전문 메뉴" />
+            <img src="/haemulhansang/img/fran/fran2/menuCp_img2.jpg" alt="해산물전문 메뉴" />
           </div>
         </div>
         <div className="sectionType1 section">
           <div className="img">
-            <img src="./img/fran/fran2/menuCp_img3.jpg" alt="심플한 조리법" />
+            <img src="/haemulhansang/img/fran/fran2/menuCp_img3.jpg" alt="심플한 조리법" />
           </div>
           <div className="text">
             <div className="title">
@@ -73,7 +73,7 @@ class Fran2 extends React.Component {
             </div>
           </div>
           <div className="img">
-            <img src="./img/fran/fran2/menuCp_img4.jpg" alt="한식의 기본은 밥, 기본부터 다릅니다" />
+            <img src="/haemulhansang/img/fran/fran2/menuCp_img4.jpg" alt="한식의 기본은 밥, 기본부터 다릅니다" />
           </div>
         </div>
       </div>
