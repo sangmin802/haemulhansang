@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/haemulhansang/static/css/main.61aa4e33.chunk.css",
-    "main.js": "/haemulhansang/static/js/main.2ca2bea7.chunk.js",
-    "main.js.map": "/haemulhansang/static/js/main.2ca2bea7.chunk.js.map",
-    "runtime-main.js": "/haemulhansang/static/js/runtime-main.2824bcaf.js",
-    "runtime-main.js.map": "/haemulhansang/static/js/runtime-main.2824bcaf.js.map",
-    "static/js/2.52538de8.chunk.js": "/haemulhansang/static/js/2.52538de8.chunk.js",
-    "static/js/2.52538de8.chunk.js.map": "/haemulhansang/static/js/2.52538de8.chunk.js.map",
-    "index.html": "/haemulhansang/index.html",
-    "precache-manifest.d364c3988b9d9d946fbc6aa61e1df1fe.js": "/haemulhansang/precache-manifest.d364c3988b9d9d946fbc6aa61e1df1fe.js",
-    "service-worker.js": "/haemulhansang/service-worker.js",
-    "static/css/main.61aa4e33.chunk.css.map": "/haemulhansang/static/css/main.61aa4e33.chunk.css.map",
-    "static/js/2.52538de8.chunk.js.LICENSE.txt": "/haemulhansang/static/js/2.52538de8.chunk.js.LICENSE.txt"
+    "main.css": "/sangmin802/haemulhansang/static/css/main.61aa4e33.chunk.css",
+    "main.js": "/sangmin802/haemulhansang/static/js/main.2ca2bea7.chunk.js",
+    "main.js.map": "/sangmin802/haemulhansang/static/js/main.2ca2bea7.chunk.js.map",
+    "runtime-main.js": "/sangmin802/haemulhansang/static/js/runtime-main.e20066be.js",
+    "runtime-main.js.map": "/sangmin802/haemulhansang/static/js/runtime-main.e20066be.js.map",
+    "static/js/2.52538de8.chunk.js": "/sangmin802/haemulhansang/static/js/2.52538de8.chunk.js",
+    "static/js/2.52538de8.chunk.js.map": "/sangmin802/haemulhansang/static/js/2.52538de8.chunk.js.map",
+    "index.html": "/sangmin802/haemulhansang/index.html",
+    "precache-manifest.88be04a3707e677142cb4216f7258669.js": "/sangmin802/haemulhansang/precache-manifest.88be04a3707e677142cb4216f7258669.js",
+    "service-worker.js": "/sangmin802/haemulhansang/service-worker.js",
+    "static/css/main.61aa4e33.chunk.css.map": "/sangmin802/haemulhansang/static/css/main.61aa4e33.chunk.css.map",
+    "static/js/2.52538de8.chunk.js.LICENSE.txt": "/sangmin802/haemulhansang/static/js/2.52538de8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.2824bcaf.js",
+    "static/js/runtime-main.e20066be.js",
     "static/js/2.52538de8.chunk.js",
     "static/css/main.61aa4e33.chunk.css",
     "static/js/main.2ca2bea7.chunk.js"
