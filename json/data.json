@@ -1,31 +1,31 @@
 {
   "routeList" : [
-    { "id" : 1, "title" : "ABOUT US", "link" : "/haemulhansang/about/oper" },
-    { "id" : 2, "title" : "MENU", "link" : "/haemulhansang/menu/menu1" },
-    { "id" : 3, "title" : "FRANCHISE", "link" : "/haemulhansang/franchise/fran1" },
-    { "id" : 4, "title" : "STORE", "link" : "/haemulhansang/store/store1" },
-    { "id" : 5, "title" : "COMMUNITY", "link" : "/haemulhansang/community/commu1" }
+    { "id" : 1, "title" : "ABOUT US", "link" : "/about/oper" },
+    { "id" : 2, "title" : "MENU", "link" : "/menu/menu1" },
+    { "id" : 3, "title" : "FRANCHISE", "link" : "/franchise/fran1" },
+    { "id" : 4, "title" : "STORE", "link" : "/store/store1" },
+    { "id" : 5, "title" : "COMMUNITY", "link" : "/community/commu1" }
   ],
   "subRouteList" : [
-    { "id" : 1, "subId" : 1, "mainId" : 1, "title" : "회사소개", "link" : "/haemulhansang/about/oper" },
-    { "id" : 2, "subId" : 2, "mainId" : 1, "title" : "브랜드 소개", "link" : "/haemulhansang/about/intro" },
-    { "id" : 3, "subId" : 3, "mainId" : 1, "title" : "브랜드 경쟁력", "link" : "/haemulhansang/about/comp" },
+    { "id" : 1, "subId" : 1, "mainId" : 1, "title" : "회사소개", "link" : "/about/oper" },
+    { "id" : 2, "subId" : 2, "mainId" : 1, "title" : "브랜드 소개", "link" : "/about/intro" },
+    { "id" : 3, "subId" : 3, "mainId" : 1, "title" : "브랜드 경쟁력", "link" : "/about/comp" },
 
-    { "id" : 4, "subId" : 1, "mainId" : 2, "title" : "뚝배기", "link" : "/haemulhansang/menu/menu1" },
-    { "id" : 5, "subId" : 2, "mainId" : 2, "title" : "회", "link" : "/haemulhansang/menu/menu2" },
-    { "id" : 6, "subId" : 3, "mainId" : 2, "title" : "비빔밥/탕", "link" : "/haemulhansang/menu/menu3" },
-    { "id" : 7, "subId" : 4, "mainId" : 2, "title" : "찜/무침", "link" : "/haemulhansang/menu/menu4" },
-    { "id" : 8, "subId" : 5, "mainId" : 2, "title" : "특선메뉴", "link" : "/haemulhansang/menu/menu5" },
+    { "id" : 4, "subId" : 1, "mainId" : 2, "title" : "뚝배기", "link" : "/menu/menu1" },
+    { "id" : 5, "subId" : 2, "mainId" : 2, "title" : "회", "link" : "/menu/menu2" },
+    { "id" : 6, "subId" : 3, "mainId" : 2, "title" : "비빔밥/탕", "link" : "/menu/menu3" },
+    { "id" : 7, "subId" : 4, "mainId" : 2, "title" : "찜/무침", "link" : "/menu/menu4" },
+    { "id" : 8, "subId" : 5, "mainId" : 2, "title" : "특선메뉴", "link" : "/menu/menu5" },
 
-    { "id" : 9, "subId" : 1, "mainId" : 3, "title" : "가맹절차", "link" : "/haemulhansang/franchise/fran1" },
-    { "id" : 10, "subId" : 2, "mainId" : 3, "title" : "메뉴 경쟁력", "link" : "/haemulhansang/franchise/fran2" },
-    { "id" : 11, "subId" : 3, "mainId" : 3, "title" : "가맹문의", "link" : "/haemulhansang/franchise/fran3" },
+    { "id" : 9, "subId" : 1, "mainId" : 3, "title" : "가맹절차", "link" : "/franchise/fran1" },
+    { "id" : 10, "subId" : 2, "mainId" : 3, "title" : "메뉴 경쟁력", "link" : "/franchise/fran2" },
+    { "id" : 11, "subId" : 3, "mainId" : 3, "title" : "가맹문의", "link" : "/franchise/fran3" },
 
-    { "id" : 12, "subId" : 1, "mainId" : 4, "title" : "매장찾기", "link" : "/haemulhansang/store/store1" },
-    { "id" : 13, "subId" : 2, "mainId" : 4, "title" : "사진갤러리", "link" : "/haemulhansang/store/store2" },
-    { "id" : 14, "subId" : 3, "mainId" : 4, "title" : "인테리어", "link" : "/haemulhansang/store/store3" },
+    { "id" : 12, "subId" : 1, "mainId" : 4, "title" : "매장찾기", "link" : "/store/store1" },
+    { "id" : 13, "subId" : 2, "mainId" : 4, "title" : "사진갤러리", "link" : "/store/store2" },
+    { "id" : 14, "subId" : 3, "mainId" : 4, "title" : "인테리어", "link" : "/store/store3" },
 
-    { "id" : 15, "subId" : 1, "mainId" : 5, "title" : "공지사항", "link" : "/haemulhansang/community/commu1" },
-    { "id" : 16, "subId" : 2, "mainId" : 5, "title" : "언론보도", "link" : "/haemulhansang/community/commu2" }
+    { "id" : 15, "subId" : 1, "mainId" : 5, "title" : "공지사항", "link" : "/community/commu1" },
+    { "id" : 16, "subId" : 2, "mainId" : 5, "title" : "언론보도", "link" : "/community/commu2" }
   ]
 }
