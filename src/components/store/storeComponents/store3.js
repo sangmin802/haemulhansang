@@ -96,7 +96,9 @@ class Store3 extends React.Component {
               {arr.map((res, index) => {
                 return <img key={index} src={`/haemulhansang/img/store/interior/exterior${res}.jpg`} width="100%" alt={`exterior${res}`} className="slideImg" onMouseDown={this.mouseDown} onMouseMove={this.mouseMove} onMouseUp={() => {
                   this.touch = false;
-                }} />
+                }} onTouchStart={this.mouseDown} onTouchMove={this.mouseMove} onTouchEnd={() => {
+                  this.touch = false;
+                }}/>
               })}                  
             </div>
           }
