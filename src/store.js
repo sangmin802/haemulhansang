@@ -1,6 +1,7 @@
 import { createStore } from 'redux';
 
 export default createStore((state, action) => {
+  // type별 return state값 설정
   if(state === undefined){
     if(JSON.parse(sessionStorage.getItem('state')) === null){
       const state = {

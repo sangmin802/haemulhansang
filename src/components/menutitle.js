@@ -1,6 +1,7 @@
 import React from 'react';
 
 class MenuTitle extends React.Component {
+  // url에 따라 상단 메뉴타이틀
   render(){
     const { title, url } = this.props;
     let desc, src = null;

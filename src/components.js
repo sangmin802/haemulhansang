@@ -9,6 +9,7 @@ import Fran from './components/fran/fran.js';
 import Store from './components/store/store.js';
 import Commu from './components/commu/commu.js';
 
+// component별 state, dispatch
 export default {
   App : connect((state) => {
     return {

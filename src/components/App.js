@@ -185,6 +185,7 @@ class App extends React.Component {
     );
   };
 
+  // 필요 json데이타 수령
   downData = () => {
     const { loaded } = this.props;
     fetch('/haemulhansang/json/data.json').then((response) => response.json()).then((data) => {
@@ -197,13 +198,12 @@ class App extends React.Component {
   componentDidMount = () => {
     const { goIndex, mobile, pc } = this.props;
     const width = window.innerWidth;
-    if(width <= 1180){
+    if(width <= 1180){ // 모바일
       this.downData();
       mobile();
-    }else if(width > 1180){
+    }else if(width > 1180){ // pc
       pc();
       this.slideMenu();
-      console.log(window.location)
       if(window.location.hash === '#/' || window.location.hash === ''){
         this.downData();
         goIndex();
