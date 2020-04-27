@@ -1,4 +1,4 @@
-# haemulhansang(React.js)  
+# haemulhansang(React.js) 200211~200227  
 * React-Router를 통한 path가 있는 SPA  
   * 웹사이트에서 특정 위치를 기억할 수 있도록 React-Router를 사용하였습니다.  
   * menutitle component에서 path마다 다른 값들을 출력할 수 있도록 하였습니다.
@@ -9,4 +9,6 @@
   * redux로 connect 된 component 또한, 재활용할 수 있도록 분리하였습니다.  
 * ES5 이상의 문법을 최대한 활용하였습니다.  
   * 첫 접속 시, state의 상수값을 확인하여 두개의 index페이지중 필요한 한가지만 띄우도록 하였습니다.  
-* fetch api를 활용하여 필요한 json정보를 가져오도록 하였습니다.
+* fetch api를 활용하여 필요한 json정보를 가져오도록 하였습니다.  
+* slide plugin이 아닌 손수 작성한 script코드로 slide를 구현하였습니다.  
+* 반응형 환경 또한 구현되었습니다.  
